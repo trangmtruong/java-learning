@@ -69,136 +69,137 @@ public class Tests
 		assertEquals(expectedPicture, studentPicture, "Zero Blue");
 	}
 
-//	@Test
-//	@Order(2)
-//	public void testMakeGrayScale()
-//	{
-//		/* Create two identical Picture objects from the same picture */
-//		Picture studentPicture = new Picture("bees.png");
-//		Picture expectedPicture = new Picture("beesBlackAndWhite.png");
-//
-//		/* apply the filter */
-//		Logic.makeGrayScale(studentPicture);
-//		
-//		// Testing that the first pixel is gray
-//		Assertions.assertEquals(studentPicture.getPixels2D()[0][0].getRed(), studentPicture.getPixels2D()[0][0].getGreen());
-//		Assertions.assertEquals(studentPicture.getPixels2D()[0][0].getGreen(), studentPicture.getPixels2D()[0][0].getBlue());
-//		Assertions.assertEquals(studentPicture.getPixels2D()[0][0].getBlue(), studentPicture.getPixels2D()[0][0].getRed());
-//
-//		// the resulting student image should be pixel by pixel equivalent to
-//		// the expectedPicture image
-//		assertEquals(expectedPicture, studentPicture, "Black and White");
-//	}
-//
-//	@Test
-//	@Order(3)
-//	public void testMakeNegative()
-//	{
-//		/* Create two identical Picture objects from the same picture */
-//		Picture originalPicture = new Picture("bees.png");
-//		Picture studentPicture = new Picture("bees.png");
-//		Picture expectedPicture = new Picture("beesNegative.png");
-//
-//		/* apply the filter */
-//		Logic.makeNegative(studentPicture);
-//		
-//		// Testing that the first pixel is color inverted
-//		Assertions.assertEquals(255-originalPicture.getPixels2D()[0][0].getRed(), studentPicture.getPixels2D()[0][0].getRed());
-//		Assertions.assertEquals(255-originalPicture.getPixels2D()[0][0].getGreen(), studentPicture.getPixels2D()[0][0].getGreen());
-//		Assertions.assertEquals(255-originalPicture.getPixels2D()[0][0].getBlue(), studentPicture.getPixels2D()[0][0].getBlue());
-//
-//		// the resulting student image should be pixel by pixel equivalent to
-//		// the expectedPicture image
-//		assertEquals(expectedPicture, studentPicture, "Negative");
-//	}
-//
-//	@Test
-//	@Order(4)
-//	public void testMakeSunset()
-//	{
-//		/* Create two identical Picture objects from the same picture */
-//		Picture originalPicture = new Picture("fireFall.png");
-//		Picture studentPicture = new Picture("fireFall.png");
-//		Picture expectedPicture = new Picture("fireFallMakeSunset.png");
-//
-//		/* apply the filter */
-//		Logic.makeSunset(studentPicture, 1.5, .9);
-//		
-//		// Testing that the first pixel is sunsetted
-//		Assertions.assertEquals(1.5*originalPicture.getPixels2D()[0][0].getRed(), studentPicture.getPixels2D()[0][0].getRed());
-//		Assertions.assertEquals(0.9*originalPicture.getPixels2D()[0][0].getGreen(), studentPicture.getPixels2D()[0][0].getGreen());
+	@Test
+	@Order(2)
+	public void testMakeGrayScale()
+	{
+		/* Create two identical Picture objects from the same picture */
+		Picture studentPicture = new Picture("bees.png");
+		Picture expectedPicture = new Picture("beesBlackAndWhite.png");
+
+		/* apply the filter */
+		Logic.makeGrayScale(studentPicture);
+		
+		// Testing that the first pixel is gray
+		Assertions.assertEquals(studentPicture.getPixels2D()[0][0].getRed(), studentPicture.getPixels2D()[0][0].getGreen());
+		Assertions.assertEquals(studentPicture.getPixels2D()[0][0].getGreen(), studentPicture.getPixels2D()[0][0].getBlue());
+		Assertions.assertEquals(studentPicture.getPixels2D()[0][0].getBlue(), studentPicture.getPixels2D()[0][0].getRed());
+
+		// the resulting student image should be pixel by pixel equivalent to
+		// the expectedPicture image
+		assertEquals(expectedPicture, studentPicture, "Black and White");
+	}
+
+	@Test
+	@Order(3)
+	public void testMakeNegative()
+	{
+		/* Create two identical Picture objects from the same picture */
+		Picture originalPicture = new Picture("bees.png");
+		Picture studentPicture = new Picture("bees.png");
+		Picture expectedPicture = new Picture("beesNegative.png");
+
+		/* apply the filter */
+		Logic.makeNegative(studentPicture);
+		
+		// Testing that the first pixel is color inverted
+		Assertions.assertEquals(255-originalPicture.getPixels2D()[0][0].getRed(), studentPicture.getPixels2D()[0][0].getRed());
+		Assertions.assertEquals(255-originalPicture.getPixels2D()[0][0].getGreen(), studentPicture.getPixels2D()[0][0].getGreen());
+		Assertions.assertEquals(255-originalPicture.getPixels2D()[0][0].getBlue(), studentPicture.getPixels2D()[0][0].getBlue());
+
+		// the resulting student image should be pixel by pixel equivalent to
+		// the expectedPicture image
+		assertEquals(expectedPicture, studentPicture, "Negative");
+	}
+
+	@Test
+	@Order(4)
+	public void testMakeSunset()
+	{
+		/* Create two identical Picture objects from the same picture */
+		Picture originalPicture = new Picture("fireFall.png");
+		Picture studentPicture = new Picture("fireFall.png");
+		Picture expectedPicture = new Picture("fireFallMakeSunset.png");
+
+		/* apply the filter */
+		Logic.makeSunset(studentPicture, 1.5, .9);
+		
+		// Testing that the first pixel is sunsetted
+		Assertions.assertEquals(Math.min(255, (int)(1.5 * originalPicture.getPixels2D()[0][0].getRed())), studentPicture.getPixels2D()[0][0].getRed());
+		Assertions.assertEquals((int)(0.9*originalPicture.getPixels2D()[0][0].getGreen()), studentPicture.getPixels2D()[0][0].getGreen());
 //		Assertions.assertEquals(0.9*originalPicture.getPixels2D()[0][0].getBlue(), studentPicture.getPixels2D()[0][0].getBlue());
-//		
-//		// the resulting student image should be pixel by pixel equivalent to
-//		// the expectedPicture image
-//		assertEquals(expectedPicture, studentPicture, "Make Sunset");
-//	}
+		Assertions.assertEquals((int)(0.9*originalPicture.getPixels2D()[0][0].getBlue()), studentPicture.getPixels2D()[0][0].getBlue());
+		
+		// the resulting student image should be pixel by pixel equivalent to
+		// the expectedPicture image
+		assertEquals(expectedPicture, studentPicture, "Make Sunset");
+	}
+
+	@Test
+	@Order(5)
+	void testFlipHorizontal()
+	{
+		/* Create two identical Picture objects from the same picture */
+		Picture originalPicture = new Picture("fireFall.png");
+		Picture studentPicture = new Picture("fireFall.png");
+		Picture expectedPicture = new Picture("fireFallFlipHorizontal.png");
+
+		/* apply the filter */
+		Logic.flipHorizontal(studentPicture);
+		
+		// Testing that the (top) left pixel is the (top) right pixel
+		Assertions.assertEquals(originalPicture.getPixels2D()[0][originalPicture.getPixels2D()[0].length-1].getRed(), studentPicture.getPixels2D()[0][0].getRed());
+		Assertions.assertEquals(originalPicture.getPixels2D()[0][originalPicture.getPixels2D()[0].length-1].getGreen(), studentPicture.getPixels2D()[0][0].getGreen());
+		Assertions.assertEquals(originalPicture.getPixels2D()[0][originalPicture.getPixels2D()[0].length-1].getBlue(), studentPicture.getPixels2D()[0][0].getBlue());
+
+		// the resulting student image should be pixel by pixel equivalent to
+		// the expectedPicture image
+		assertEquals(expectedPicture, studentPicture, "Flip Horizontal");
+	}
 //
-//	@Test
-//	@Order(5)
-//	void testFlipHorizontal()
-//	{
-//		/* Create two identical Picture objects from the same picture */
-//		Picture originalPicture = new Picture("fireFall.png");
-//		Picture studentPicture = new Picture("fireFall.png");
-//		Picture expectedPicture = new Picture("fireFallFlipHorizontal.png");
-//
-//		/* apply the filter */
-//		Logic.flipHorizontal(studentPicture);
-//		
-//		// Testing that the (top) left pixel is the (top) right pixel
-//		Assertions.assertEquals(originalPicture.getPixels2D()[0][originalPicture.getPixels2D()[0].length-1].getRed(), studentPicture.getPixels2D()[0][0].getRed());
-//		Assertions.assertEquals(originalPicture.getPixels2D()[0][originalPicture.getPixels2D()[0].length-1].getGreen(), studentPicture.getPixels2D()[0][0].getGreen());
-//		Assertions.assertEquals(originalPicture.getPixels2D()[0][originalPicture.getPixels2D()[0].length-1].getBlue(), studentPicture.getPixels2D()[0][0].getBlue());
-//
-//		// the resulting student image should be pixel by pixel equivalent to
-//		// the expectedPicture image
-//		assertEquals(expectedPicture, studentPicture, "Flip Horizontal");
-//	}
-//
-//	@Test
-//	@Order(6)
-//	public void testFlipVertical()
-//	{
-//		/* Create two identical Picture objects from the same picture */
-//		Picture originalPicture = new Picture("fireFall.png");
-//		Picture studentPicture = new Picture("fireFall.png");
-//		Picture expectedPicture = new Picture("fireFallFlipVertical.png");
-//
-//		/* apply the filter */
-//		Logic.flipVertical(studentPicture);
-//		
-//		// Testing that the top (left) pixel is the bottom (left) pixel
-//		Assertions.assertEquals(originalPicture.getPixels2D()[originalPicture.getPixels2D().length-1][0].getRed(), studentPicture.getPixels2D()[0][0].getRed());
-//		Assertions.assertEquals(originalPicture.getPixels2D()[originalPicture.getPixels2D().length-1][0].getGreen(), studentPicture.getPixels2D()[0][0].getGreen());
-//		Assertions.assertEquals(originalPicture.getPixels2D()[originalPicture.getPixels2D().length-1][0].getBlue(), studentPicture.getPixels2D()[0][0].getBlue());
-//
-//		// the resulting student image should be pixel by pixel equivalent to
-//		// the expectedPicture image
-//		assertEquals(expectedPicture, studentPicture, "Flip Vertical");
-//	}
-//
-//	@Test
-//	@Order(7)
-//	public void testBlur()
-//	{
-//		/* Create two identical Picture objects from the same picture */
-//		Picture originalPicture = new Picture("fireFall.png");
-//		Picture studentPicture = new Picture("fireFall.png");
-//		Picture expectedPicture = new Picture("fireFallBlur.png");
-//
-//		/* apply the filter */
-//		Logic.blur(studentPicture);
-//		
-//		// Testing the top, left pixel is a mix of the three pixels that are around it and itself
-//		Assertions.assertEquals((originalPicture.getPixels2D()[0][0].getRed() + originalPicture.getPixels2D()[0][1].getRed() + 
-//								 originalPicture.getPixels2D()[1][0].getRed() + originalPicture.getPixels2D()[1][1].getRed())/4, 
-//								 studentPicture.getPixels2D()[0][0].getRed());		
-//
-//		// the resulting student image should be pixel by pixel equivalent to
-//		// the expectedPicture image
-//		assertEquals(expectedPicture, studentPicture, "Blur");
-//	}
+	@Test
+	@Order(6)
+	public void testFlipVertical()
+	{
+		/* Create two identical Picture objects from the same picture */
+		Picture originalPicture = new Picture("fireFall.png");
+		Picture studentPicture = new Picture("fireFall.png");
+		Picture expectedPicture = new Picture("fireFallFlipVertical.png");
+
+		/* apply the filter */
+		Logic.flipVertical(studentPicture);
+		
+		// Testing that the top (left) pixel is the bottom (left) pixel
+		Assertions.assertEquals(originalPicture.getPixels2D()[originalPicture.getPixels2D().length-1][0].getRed(), studentPicture.getPixels2D()[0][0].getRed());
+		Assertions.assertEquals(originalPicture.getPixels2D()[originalPicture.getPixels2D().length-1][0].getGreen(), studentPicture.getPixels2D()[0][0].getGreen());
+		Assertions.assertEquals(originalPicture.getPixels2D()[originalPicture.getPixels2D().length-1][0].getBlue(), studentPicture.getPixels2D()[0][0].getBlue());
+
+		// the resulting student image should be pixel by pixel equivalent to
+		// the expectedPicture image
+		assertEquals(expectedPicture, studentPicture, "Flip Vertical");
+	}
+
+	@Test
+	@Order(7)
+	public void testBlur()
+	{
+		/* Create two identical Picture objects from the same picture */
+		Picture originalPicture = new Picture("fireFall.png");
+		Picture studentPicture = new Picture("fireFall.png");
+		Picture expectedPicture = new Picture("fireFallBlur.png");
+
+		/* apply the filter */
+		Logic.blur(studentPicture);
+		
+		// Testing the top, left pixel is a mix of the three pixels that are around it and itself
+		Assertions.assertEquals((originalPicture.getPixels2D()[0][0].getRed() + originalPicture.getPixels2D()[0][1].getRed() + 
+								 originalPicture.getPixels2D()[1][0].getRed() + originalPicture.getPixels2D()[1][1].getRed())/4, 
+								 studentPicture.getPixels2D()[0][0].getRed());		
+
+		// the resulting student image should be pixel by pixel equivalent to
+		// the expectedPicture image
+		assertEquals(expectedPicture, studentPicture, "Blur");
+	}
 
 	
 	// //////// Private utility methods
