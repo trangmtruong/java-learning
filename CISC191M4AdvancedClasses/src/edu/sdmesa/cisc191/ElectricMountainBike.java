@@ -25,8 +25,25 @@ package edu.sdmesa.cisc191;
 
 // TODO: Implement and comment all IS-A (inheritance) and IS (implements) relationships separately
 
-public class ElectricMountainBike
+public class ElectricMountainBike extends Bicycle implements Gearable, Movable, Electric 
 {
+
+	/**
+	 * Purpose: 
+	 * @param newMake
+	 */
+	public ElectricMountainBike(String newMake)
+	{
+		super(newMake);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public int getGear()
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	// TODO: Implement and comment each HAS-A relationships separately
 	
 	
