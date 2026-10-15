@@ -30,16 +30,20 @@ import java.awt.Color;
  */
 public class Boat
 {
-	//instance variables
+	//FIELDS
+	//(instance variables)
 	private String make; // a Boat has-a make
 	private Color color; // a Boat has-a color
 	private int speed; // a Boat has-a speed
 	private int price;// a Boat has-a price
+	
 	private static int ticketCounter = 1; //shared counter number for all Boat's serial numbers
 	private final int serialNumber; // a Boat has-a serial number
 	private Person owner; //a Boat has-an owner
 	private Person captain; //a Boat has-a captain
 	
+	
+	//CONSTRUCTORS
 	public Boat()// no parameter (default constructor)
 	{
 		// the job of the constructor is to initialize the instance variable
@@ -50,7 +54,6 @@ public class Boat
 		
 		serialNumber = createNewSerialNumber(); // create a new serial number
 												// for each boat
-		
 	}
 	
 	/**
@@ -87,6 +90,17 @@ public class Boat
 		
 	}
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//METHODS
+	
 	/**
 	 * Purpose: return the make of this boat
 	 * 
@@ -117,6 +131,11 @@ public class Boat
 		return speed;
 	}
 	
+	
+	
+	
+	
+	
 	/**
 	 * Purpose: return the price of this boat
 	 * 
@@ -126,6 +145,31 @@ public class Boat
 	{
 		return price;
 	}
+	
+	
+	
+	/**
+	 * Purpose: sets the price of this boat
+	 * 
+	 * @param newPrice the new price for this boat
+	 */
+	public void setPrice(int newPrice)
+	{
+		price = newPrice;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	/**
 	 * Purpose: return the serial number of this boat
@@ -156,15 +200,15 @@ public class Boat
 	{
 		return captain;
 	}
-	/**
-	 * Purpose: sets the price of this boat
-	 * 
-	 * @param newPrice the new price for this boat
-	 */
-	public void setPrice(int newPrice)
-	{
-		price = newPrice;
-	}
+//	/**
+//	 * Purpose: sets the price of this boat
+//	 * 
+//	 * @param newPrice the new price for this boat
+//	 */
+//	public void setPrice(int newPrice)
+//	{
+//		price = newPrice;
+//	}
 	
 	/**
 	 * Purpose: sets the color of this boat

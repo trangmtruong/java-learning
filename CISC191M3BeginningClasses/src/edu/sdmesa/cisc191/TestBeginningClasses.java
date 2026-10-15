@@ -99,6 +99,7 @@ class TestBeginningClasses
 	void testAccessorsAndMutators()
 	{
 		Boat boat = new Boat();
+		
 		boat.setColor(Color.GREEN);
 		assertEquals(Color.GREEN, boat.getColor());
 	    boat.setColor(Color.RED);
@@ -111,6 +112,9 @@ class TestBeginningClasses
 	void testSpeedMethods()
 	{
 		Boat boat = new Boat("BHM", Color.BLUE);
+		
+		
+		
 		assertEquals(0, boat.getSpeed());
 		boat.speedUp();
 		assertEquals(1, boat.getSpeed());
