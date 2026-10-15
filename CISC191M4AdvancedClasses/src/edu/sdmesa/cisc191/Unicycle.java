@@ -2,41 +2,78 @@
 
 package edu.sdmesa.cisc191;
 
+import java.awt.Color;
+
 /**
  * Lead Author(s):
- * @author 
- * @author 
- * <<add additional lead authors here, with a full first and last name>>
  * 
- * Other contributors:
- * <<add additional contributors (mentors, tutors, friends) here, with contact information>>
+ * @author Mia Truong
+ *
+ *         References:
+ *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented
+ *         Problem Solving.
+ *         Retrieved from
+ *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
- * References:
- * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
- * Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
- * <<add more references here>>
- *  
- * Version/date: 
+ *         Version/date: 10/15/26
  * 
- * Responsibilities of class:
- * A Unicycle is a Cycle with only one wheel
+ *         Responsibilities of class:
+ *         A Unicycle is a Cycle with only one wheel
  */
 
- // TODO: Implement and comment all IS-A (inheritance) relationships
- 
-public class Unicycle extends Cycle
+
+public class Unicycle extends Cycle // a Unicycle IS-A Cycle
 {
-	// TODO: Implement and comment HAS-A relationships separately
+	
+	private Color color; // a Unicycle HAS-A color
 	
 	/**
-	 * Purpose: 
-	 * @param string
+	 * Purpose: Unicycle constructor, inherits from abstract parent class Cycle
+	 * 
+	 * @param string newMake
 	 */
 	public Unicycle(String newMake)
 	{
-		// TODO Auto-generated constructor stub
 		super(newMake);
+		
+	}
+	
+	/**
+	 * Purpose: get the number of wheels a Unicyle has
+	 * 
+	 * @return 1
+	 */
+	
+	@Override
+	public int getNumberOfWheels()
+	{
+		return 1;
+	}
+	
+	/**
+	 * Purpose: get the color of the Unicyle
+	 * 
+	 * @return color
+	 */
+	
+	
+	@Override
+	public Color getColor()
+	{
+		return color;
+	}
+	
+	/**
+	 * Purpose: set the color of the Unicyle
+	 * 
+	 * @param newColor
+	 */
+	
+	@Override
+	public void setColor(Color newColor)
+	{
+		this.color = newColor;
 		
 	}
 	

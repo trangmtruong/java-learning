@@ -6,60 +6,66 @@ import java.awt.Color;
 
 /**
  * Lead Author(s):
- * @author 
- * @author 
- * <<add additional lead authors here, with a full first and last name>>
  * 
- * Other contributors:
- * <<add additional contributors (mentors, tutors, friends) here, with contact information>>
+ * @author Mia Truong
  * 
- * References:
- * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
- * Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+ *         References:
+ *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented
+ *         Problem Solving.
+ *         Retrieved from
+ *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
- * <<add more references here>>
- *  
- * Version/date: 
+ * 		
+ *         Version/date: 10/15/26
  * 
- * Responsibilities of class:
- * 
+ *         Responsibilities of class: Cycle is the abstract super class of of the Bicyle, Unicycle, and ElectricMountainBike
+ * 		
  */
 /**
  * Only change sections that are marked with TODO
  */
 
-//TODO: Implement and comment all IS-A (inheritance) relationships
+//Cycle class is-an Object
 
 public abstract class Cycle
 {
-	// TODO: Implement and comment HAS-A relationships separately
-	
 	// A cycle has a unique frame number, that is *immutable*.
-	// How are you going to make it immutable, so that it only gets one final number? 
+	// How are you going to make it immutable, so that it only gets one final
+	// number?
 	// (Hint: did you see the hint?)
-	// TODO:
-	
+	private String make; // a cycle has-a make
+	private static int frameNumberCounter = 1; // every cycle shares this counter 
+												
+	private final int frameNumber; // a cycle has-a frameNumber
 	
 	public Cycle(String newMake)
 	{
-		// TODO
+		
+		this.make = newMake;	
+		this.frameNumber = createNewFrameNumber();
+		
 	}
-
+	
 	abstract int getNumberOfWheels();
-
+	
+	
 	/**
 	 * 
 	 * @return the color of the bike; can be null
 	 */
 	abstract Color getColor();
-
+	
+	
+	
 	/**
 	 * Changes the color of the bike
 	 * 
 	 * @param newColor
 	 */
 	abstract void setColor(Color newColor);
-
+	
+	
+	
 	/**
 	 * 
 	 * @return make or brand that was set when the bike was made
@@ -67,40 +73,55 @@ public abstract class Cycle
 	public String getMake()
 	{
 		// TODO
-		return "make";
+		return this.make;
 	}
+	
+	//NOTE: No setFrameNumber because  a setter for something that's
+	//supposed to be immutable (cannot be changed)
+	//sends mixed signals
+	//frameNumber is declared final so cannot be changed (cannot set a new one)
 	
 	/**
 	 * 
-	 * @return the unique serial "number" that was stamped in the frame when the bike was made
+	 * @return the unique serial "number" that was stamped in the frame when the
+	 *         bike was made
 	 * @see https://www.eta.co.uk/bicycle-insurance/frequently-asked-questions/how-to-find-a-bicycle-frame-number/
 	 */
 	public String getFrameNumber()
 	{
-		// TODO
-		return "make12345";
+		return make + this.frameNumber;
 	}
 	
 	/**
-	 *  @return true if the frame "numbers" are the same
+	 * 
+	 * Purpose: create a new frameNumberCounter 
+	 * @return frameNumberCounter then add 1 to it after
 	 */
-//	@Override
-//	public boolean equals(Object other)
-//	{
-//		// TODO: 
-//		// Hint: use instanceof
-//		// See: https://www.sitepoint.com/implement-javas-equals-method-correctly/
-//		return false;
-//	}
+	
+	private static int createNewFrameNumber() {
+		return frameNumberCounter ++;
+	}
+	/**
+	 * @return true if the frame "numbers" are the same
+	 */
+	// @Override
+	// public boolean equals(Object other)
+	// {
+	// // TODO:
+	// // Hint: use instanceof
+	// // See:
+	// https://www.sitepoint.com/implement-javas-equals-method-correctly/
+	// return false;
+	// }
 	
 	/**
 	 * @return String describing the object, including frame number and color
 	 */
-//	@Override
-//	public String toString()
-//	{
-//		//TODO:
-//		return "Hello, I'm a Cycle";
-//	}
-
+	// @Override
+	// public String toString()
+	// {
+	// //TODO:
+	// return "Hello, I'm a Cycle";
+	// }
+	
 }
