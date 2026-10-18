@@ -15,17 +15,30 @@
 *
 * <<Add more references here>>
 *
-* Version: 2026-10-13
+* Version: 2026-10-17
 */
 package edu.sdmesa.cisc191;
 
 /**
- * Purpose: The reponsibility of Electric is ...
+ * Purpose: The reponsibility of BikeShopDemo is ...
  *
- * Electric is-a ...
- * Electric is ...
+ * BikeShopDemo is-a ...
+ * BikeShopDemo is ...
  */
-public interface Electric
+public class BikeShopDemo
 {
+	
+	/**
+	 * Purpose: 
+	 * @param args
+	 */
+	public static void main(String[] args)
+	{
+		BikeShop shop = new BikeShop("Mia's Bike Shop");
+		
+		shop.getName();
+		
+		System.out.println(shop);
+	}
 	
 }
