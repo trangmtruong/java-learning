@@ -4,22 +4,15 @@ package edu.sdmesa.cisc191;
 /**
  * Lead Author(s):
  * 
- * @author
- * @author
- *         <<add additional lead authors here, with a full first and last name>>
- * 
- * Other contributors:
- *         <<add additional contributors (mentors, tutors, friends) here, with
- *         contact information>>
+ * @author Mia Truong
  * 
  * References:
  *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
  *         Retrieved from
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
- *         <<add more references here>>
  * 
- * Version/date:
+ * Version/date: 10/23/2026
  * 
  * Responsibilities of class:
  * 
@@ -29,18 +22,32 @@ import java.util.ArrayList;
 public class StringArrayListConsumer implements Consumer<String>
 {
 	// An ArrayListConsumer has-many Strings
-	// private TODO
+	private ArrayList<String> initialStrings;
 
+	//constructor
 	public StringArrayListConsumer(ArrayList<String> initialStrings) 
 	{
-		// TODO
+		//set the  initialStrings to initialStrings variable of this class
+		this.initialStrings = initialStrings;
 	}
 
 	@Override
 	public String consume() 
 	{
-		// TODO: Remove a String from collection
+		//if the initialStrings array list is empty
+		//this shoud return true or false
+		if(initialStrings.isEmpty())
+		{
+			//return null if empty
+	
 		return null;
+
+		}
+		//if not empty
+		//remove the 1st element on the list (at index 0)
+				//and return it
+		return initialStrings.remove(0);
+	
 
 	}
 

@@ -4,47 +4,47 @@ package edu.sdmesa.cisc191;
 /**
  * Lead Author(s):
  * 
- * @author
- * @author
- *         <<add additional lead authors here, with a full first and last name>>
- * 
- * Other contributors:
- *         <<add additional contributors (mentors, tutors, friends) here, with
- *         contact information>>
+ * @author Mia Truong
  * 
  * References:
  *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
  *         Retrieved from
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
- *         <<add more references here>>
  * 
- * Version/date:
+ * Version/date: 10/23/2026
  * 
  * Responsibilities of class:
  * 
  */
+
 import java.util.ArrayList;
 
 public class StringArrayListProducer implements Producer<String>
 {
-	// An ArrayListConsumer has-many Strings
-	// private TODO
-
+	// An ArrayLisProducer has-many Strings
+	private ArrayList<String> initialStrings;
+	
+	
+//constructor
 	public StringArrayListProducer(ArrayList<String> initialStrings) 
 	{
-		// TODO 
+		//set the  initialStrings to initialStrings variable of this class
+		this.initialStrings = initialStrings;
 	}
 
 	@Override
 	public void produce(String item)
 	{
-		// TODO Add item to collection
+		//Adds item to collection
+		initialStrings.add(item);
+		
 	}
 
 	public void produce(int index, String newString)
 	{
 		// TODO 
+//		initialStrings.remove(index);
 	}
 
 }
