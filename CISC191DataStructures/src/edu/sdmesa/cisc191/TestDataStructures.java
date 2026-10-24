@@ -89,31 +89,31 @@ class TestDataStructures
 		assertNull(listConsumer.consume());
 	}
 
-//	@Test
-//	public void testLinkedListProducerConsumert()
-//	{
-//		LinkedList<String> list = new LinkedList<String>();
-//		// stringProducer is-a Producer (interface) of Strings
-//		Producer<String> stringProducer =  new StringLinkedListProducer(list);
-//		// stringConsumer  is-a Consumer (interface) of Strings
-//		Consumer<String> stringConsumer = new StringLinkedListConsumer(list);
-//		
-//		assertEquals(true, list.isEmpty());
-//		// Produce two items inserted in order on the list
-//		stringProducer.produce("1st");
-//		stringProducer.produce("2nd");
-//
-//		// Consume (and remove) the 1st element on the list
-//		assertEquals("1st", stringConsumer.consume());
-//
-//		stringProducer.produce("3rd");
-//
-//		assertEquals("2nd", stringConsumer.consume());
-//		assertEquals("3rd", stringConsumer.consume());
-//		assertNull(stringConsumer.consume());
-//		
-//		assertEquals(true, list.isEmpty());
-//	}
+	@Test
+	public void testLinkedListProducerConsumert()
+	{
+		LinkedList<String> list = new LinkedList<String>();
+		// stringProducer is-a Producer (interface) of Strings
+		Producer<String> stringProducer =  new StringLinkedListProducer(list);
+		// stringConsumer  is-a Consumer (interface) of Strings
+		Consumer<String> stringConsumer = new StringLinkedListConsumer(list);
+		
+		assertEquals(true, list.isEmpty());
+		// Produce two items inserted in order on the list
+		stringProducer.produce("1st");
+		stringProducer.produce("2nd");
+
+		// Consume (and remove) the 1st element on the list
+		assertEquals("1st", stringConsumer.consume());
+
+		stringProducer.produce("3rd");
+
+		assertEquals("2nd", stringConsumer.consume());
+		assertEquals("3rd", stringConsumer.consume());
+		assertNull(stringConsumer.consume());
+		
+		assertEquals(true, list.isEmpty());
+	}
 //
 //	@Test
 //	public void testQueue()
