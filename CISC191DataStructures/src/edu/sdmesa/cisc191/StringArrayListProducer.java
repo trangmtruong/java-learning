@@ -41,10 +41,10 @@ public class StringArrayListProducer implements Producer<String>
 		
 	}
 
-	public void produce(int index, String newString)
+	public void produceAtIndex(int index, String newString)
 	{
-		// TODO 
-//		initialStrings.remove(index);
+		// add the newString to the specified index
+		initialStrings.add(index, newString);
 	}
 
 }

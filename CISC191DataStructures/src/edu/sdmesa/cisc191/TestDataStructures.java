@@ -59,36 +59,36 @@ class TestDataStructures
 		assertEquals(true, list.isEmpty());
 	}
 
-//	@Test
-//	public void testArrayList()
-//	{
-//		// In this scenario we are going to to test that ArrayLists can insert elements at a specific index
-//		
-//		ArrayList<String> list = new ArrayList<String>();
-//		StringArrayListProducer listProducer = new StringArrayListProducer(list);
-//		StringArrayListConsumer listConsumer = new StringArrayListConsumer(list);
-//		
-//		assertEquals(true, list.isEmpty());
-//		listProducer.produce("1st");
-//		// Insert at index
-//		listProducer.produceAtIndex(1, "3rd");
-//		listProducer.produceAtIndex(1, "2nd");
-//
-//		// Consume (and remove) the 1st element on the list
-//		assertEquals("1st", listConsumer.consume());
-//
-//		listProducer.produceAtIndex(1, "4th");
-//		listProducer.produce("5th");
-//
-//		assertEquals("2nd", listConsumer.consume());
-//		assertEquals("4th", listConsumer.consume());
-//		assertEquals("3rd", listConsumer.consume());
-//		assertEquals("5th", listConsumer.consume());
-//		
-//		assertEquals(true, list.isEmpty());
-//		assertNull(listConsumer.consume());
-//	}
-//
+	@Test
+	public void testArrayList()
+	{
+		// In this scenario we are going to to test that ArrayLists can insert elements at a specific index
+		
+		ArrayList<String> list = new ArrayList<String>();
+		StringArrayListProducer listProducer = new StringArrayListProducer(list);
+		StringArrayListConsumer listConsumer = new StringArrayListConsumer(list);
+		
+		assertEquals(true, list.isEmpty());
+		listProducer.produce("1st");
+		// Insert at index
+		listProducer.produceAtIndex(1, "3rd");
+		listProducer.produceAtIndex(1, "2nd");
+
+		// Consume (and remove) the 1st element on the list
+		assertEquals("1st", listConsumer.consume());
+
+		listProducer.produceAtIndex(1, "4th");
+		listProducer.produce("5th");
+
+		assertEquals("2nd", listConsumer.consume());
+		assertEquals("4th", listConsumer.consume());
+		assertEquals("3rd", listConsumer.consume());
+		assertEquals("5th", listConsumer.consume());
+		
+		assertEquals(true, list.isEmpty());
+		assertNull(listConsumer.consume());
+	}
+
 //	@Test
 //	public void testLinkedListProducerConsumert()
 //	{
