@@ -190,43 +190,43 @@ class TestDataStructures
 		char[] empty = "".toCharArray();
 		assertTrue(Palindrome.isPalindrome(empty));
 	}
-//	
-//	@Test
-//	public void testPhoneDirectory()
-//	{
-//		// This challenge is to implement a phone book that has-many contacts with their phone numbers
-//      // Hint: which data structure allows you to retrieve an element based on a String?
-//		PhoneDirectory directory = new PhoneDirectory();
-//		directory.setNumberForContact("Alice", 1111);	
-//		assertEquals(1111, directory.findNumberForContact("Alice"));
-//		assertEquals(null, directory.findNumberForContact("Bob"));
-//				
-//		directory.setNumberForContact("Bob", 2222);	
-//		assertEquals(1111, directory.findNumberForContact("Alice"));
-//		assertEquals(2222, directory.findNumberForContact("Bob"));
-//		
-//		directory.setNumberForContact("Bob's cell", 3333);	
-//		assertEquals(1111, directory.findNumberForContact("Alice"));
-//		assertEquals(2222, directory.findNumberForContact("Bob"));
-//		assertEquals(3333, directory.findNumberForContact("Bob's cell"));
-//
-//		directory.setNumberForContact("Bob", 4444);	
-//		assertEquals(1111, directory.findNumberForContact("Alice"));
-//		assertEquals(4444, directory.findNumberForContact("Bob"));
-//		assertEquals(3333, directory.findNumberForContact("Bob's cell"));
-//
-//	    directory.forgetContact("Bob");	
-//	    assertEquals(null, directory.findNumberForContact("Bob"));
-//	    assertEquals(1111, directory.findNumberForContact("Alice"));
-//	    assertEquals(3333, directory.findNumberForContact("Bob's cell"));
-//
-//    	directory.forgetContact("Bob's cell");	
-//    	assertEquals(null, directory.findNumberForContact("Bob"));
-//    	assertEquals(1111, directory.findNumberForContact("Alice"));
-//    	assertEquals(null, directory.findNumberForContact("Bob's cell"));
-//	    
-//	    assertNull(directory.findNumberForContact("Xavier"));
-//	}
+	
+	@Test
+	public void testPhoneDirectory()
+	{
+		// This challenge is to implement a phone book that has-many contacts with their phone numbers
+      // Hint: which data structure allows you to retrieve an element based on a String?
+		PhoneDirectory directory = new PhoneDirectory();
+		directory.setNumberForContact("Alice", 1111);	
+		assertEquals(1111, directory.findNumberForContact("Alice"));
+		assertEquals(null, directory.findNumberForContact("Bob"));
+				
+		directory.setNumberForContact("Bob", 2222);	
+		assertEquals(1111, directory.findNumberForContact("Alice"));
+		assertEquals(2222, directory.findNumberForContact("Bob"));
+		
+		directory.setNumberForContact("Bob's cell", 3333);	
+		assertEquals(1111, directory.findNumberForContact("Alice"));
+		assertEquals(2222, directory.findNumberForContact("Bob"));
+		assertEquals(3333, directory.findNumberForContact("Bob's cell"));
+
+		directory.setNumberForContact("Bob", 4444);	
+		assertEquals(1111, directory.findNumberForContact("Alice"));
+		assertEquals(4444, directory.findNumberForContact("Bob"));
+		assertEquals(3333, directory.findNumberForContact("Bob's cell"));
+
+	    directory.forgetContact("Bob");	
+	    assertEquals(null, directory.findNumberForContact("Bob"));
+	    assertEquals(1111, directory.findNumberForContact("Alice"));
+	    assertEquals(3333, directory.findNumberForContact("Bob's cell"));
+
+    	directory.forgetContact("Bob's cell");	
+    	assertEquals(null, directory.findNumberForContact("Bob"));
+    	assertEquals(1111, directory.findNumberForContact("Alice"));
+    	assertEquals(null, directory.findNumberForContact("Bob's cell"));
+	    
+	    assertNull(directory.findNumberForContact("Xavier"));
+	}
 //	
 //	@Test
 //	public void testSearchEngine()
@@ -270,6 +270,6 @@ class TestDataStructures
 //		// Pro Tip: use a list constructor
 //		goggles.search("car").clear();
 //		assertEquals(3, goggles.search("car").size());	
-//	}
+	}
 	
-}
+ 
