@@ -172,24 +172,24 @@ class TestDataStructures
 		
 		assertNull(consumer.consume());
 	}
-//	
-//	@Test
-//	public void testPalindrome()
-//	{
-//		// In this scenario, use two data structures that work in "opposite" directions, 
-//		// to see if a word is a palindrome: https://en.wikipedia.org/wiki/Palindrome
-//		
-//		char[] lol = {'l', 'o', 'l'};
-//		assertTrue(Palindrome.isPalindrome(lol));
-//		char[] car = {'c', 'a', 'r'};
-//		assertFalse(Palindrome.isPalindrome(car));
-//		char[] cabc = {'c', 'a', 'b', 'c'};
-//		assertFalse(Palindrome.isPalindrome(cabc));
-//		char[] racecar = "racecar".toCharArray();
-//		assertTrue(Palindrome.isPalindrome(racecar));
-//		char[] empty = "".toCharArray();
-//		assertTrue(Palindrome.isPalindrome(empty));
-//	}
+	
+	@Test
+	public void testPalindrome()
+	{
+		// In this scenario, use two data structures that work in "opposite" directions, 
+		// to see if a word is a palindrome: https://en.wikipedia.org/wiki/Palindrome
+		
+		char[] lol = {'l', 'o', 'l'};
+		assertTrue(Palindrome.isPalindrome(lol));
+		char[] car = {'c', 'a', 'r'};
+		assertFalse(Palindrome.isPalindrome(car));
+		char[] cabc = {'c', 'a', 'b', 'c'};
+		assertFalse(Palindrome.isPalindrome(cabc));
+		char[] racecar = "racecar".toCharArray();
+		assertTrue(Palindrome.isPalindrome(racecar));
+		char[] empty = "".toCharArray();
+		assertTrue(Palindrome.isPalindrome(empty));
+	}
 //	
 //	@Test
 //	public void testPhoneDirectory()
