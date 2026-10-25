@@ -114,64 +114,64 @@ class TestDataStructures
 		
 		assertEquals(true, list.isEmpty());
 	}
-//
-//	@Test
-//	public void testQueue()
-//	{
-//		// In this scenario we are simulating a food ordering system: First come, first serve
-//		
-//		Queue<String> queue = new LinkedList<String>();
-//		Producer<String> producer = new StringQueueProducer(queue);
-//		Consumer<String> consumer = new StringQueueConsumer(queue);
-//
-//		assertEquals(true, queue.isEmpty());
-//
-//		// Produce at the back end of the queue
-//		producer.produce("Meal #1: Apple Pie");
-//		producer.produce("Meal #2: Burger");
-//		producer.produce("Meal #3: Caesar Salad");
-//
-//		// Consume at the front of the queue
-//		assertEquals("Meal #1: Apple Pie", consumer.consume());
-//		assertEquals("Meal #2: Burger", consumer.consume());
-//
-//		producer.produce("Meal #4: Dumplings");
-//
-//		assertEquals("Meal #3: Caesar Salad", consumer.consume());
-//		assertEquals("Meal #4: Dumplings", consumer.consume());
-//		assertEquals(true, queue.isEmpty());
-//		
-//		assertNull(consumer.consume());
-//	}
-//
-//	@Test
-//	public void testStack()
-//	{
-//		// In this (contrived) scenario we are making burgers by stacking ingredients 
-//		
-//		Stack<String> stack = new Stack<String>();
-//		Producer<String> producer = new StringStackProducer(stack);
-//		Consumer<String> consumer = new StringStackConsumer(stack);
-//		
-//		assertEquals(true, stack.isEmpty());
-//		
-//		// Produce places items on top of the stack
-//		producer.produce("Bottom bun");
-//		producer.produce("Lettuce");
-//		producer.produce("Two patties");
-//		
-//		// Consume removes items from the top of the stack
-//		assertEquals("Two patties", consumer.consume());
-//		assertEquals("Lettuce", consumer.consume());
-//		
-//		producer.produce("Top bun");
-//		
-//		assertEquals("Top bun", consumer.consume());
-//		assertEquals("Bottom bun", consumer.consume());
-//		assertEquals(true, stack.isEmpty());
-//		
-//		assertNull(consumer.consume());
-//	}
+
+	@Test
+	public void testQueue()
+	{
+		// In this scenario we are simulating a food ordering system: First come, first serve
+		
+		Queue<String> queue = new LinkedList<String>();
+		Producer<String> producer = new StringQueueProducer(queue);
+		Consumer<String> consumer = new StringQueueConsumer(queue);
+
+		assertEquals(true, queue.isEmpty());
+
+		// Produce at the back end of the queue
+		producer.produce("Meal #1: Apple Pie");
+		producer.produce("Meal #2: Burger");
+		producer.produce("Meal #3: Caesar Salad");
+
+		// Consume at the front of the queue
+		assertEquals("Meal #1: Apple Pie", consumer.consume());
+		assertEquals("Meal #2: Burger", consumer.consume());
+
+		producer.produce("Meal #4: Dumplings");
+
+		assertEquals("Meal #3: Caesar Salad", consumer.consume());
+		assertEquals("Meal #4: Dumplings", consumer.consume());
+		assertEquals(true, queue.isEmpty());
+		
+		assertNull(consumer.consume());
+	}
+
+	@Test
+	public void testStack()
+	{
+		// In this (contrived) scenario we are making burgers by stacking ingredients 
+		
+		Stack<String> stack = new Stack<String>();
+		Producer<String> producer = new StringStackProducer(stack);
+		Consumer<String> consumer = new StringStackConsumer(stack);
+		
+		assertEquals(true, stack.isEmpty());
+		
+		// Produce places items on top of the stack
+		producer.produce("Bottom bun");
+		producer.produce("Lettuce");
+		producer.produce("Two patties");
+		
+		// Consume removes items from the top of the stack
+		assertEquals("Two patties", consumer.consume());
+		assertEquals("Lettuce", consumer.consume());
+		
+		producer.produce("Top bun");
+		
+		assertEquals("Top bun", consumer.consume());
+		assertEquals("Bottom bun", consumer.consume());
+		assertEquals(true, stack.isEmpty());
+		
+		assertNull(consumer.consume());
+	}
 //	
 //	@Test
 //	public void testPalindrome()
