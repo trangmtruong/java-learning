@@ -15,7 +15,7 @@ package edu.sdmesa.cisc191;
 import java.util.Stack;
 
 /**
- * Purpose: The reponsibility of StringStackConsumer is ...
+ * Purpose: The reponsibility of StringStackConsumer is to consume an iten
  *
  ***/
 

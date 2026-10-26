@@ -227,49 +227,49 @@ class TestDataStructures
 	    
 	    assertNull(directory.findNumberForContact("Xavier"));
 	}
-//	
-//	@Test
-//	public void testSearchEngine()
-//	{
-//		// In this scenario we are creating an Internet search engine
-//		// which returns multiple results for each search keyword.
-//		// This implies that a search engine has-many search results.
-//		// Hint: this requires multiple data structures collaborating
-//		SearchEngine goggles = new SearchEngine();
-//		
-//		goggles.addSearchResult("ice cream", "http://mothersicecream.com");
-//		assertTrue(goggles.search("ice cream") instanceof List);
-//		assertEquals(1, goggles.search("ice cream").size());
-//		goggles.addSearchResult("ice cream", "http://notyourmothersicecream.com");
-//		assertEquals(2, goggles.search("ice cream").size());
-//		
-//		goggles.addSearchResult("car", "http://foundontheroaddead.com");
-//		goggles.addSearchResult("car", "http://cashanddrive.com");
-//		goggles.addSearchResult("car", "http://fancycar.com");
-//		
-//		assertTrue(goggles.search("ice cream").contains("http://notyourmothersicecream.com"));
-//		assertTrue(goggles.search("ice cream").contains("http://mothersicecream.com"));
-//		assertFalse(goggles.search("ice cream").contains("http://foundontheroaddead.com"));
-//		assertFalse(goggles.search("ice cream").contains("http://fancycar.com"));
-//		assertFalse(goggles.search("ice cream").contains("http://cashanddrive.com"));
-//		
-//		assertTrue(goggles.search("car").contains("http://foundontheroaddead.com"));
-//		assertTrue(goggles.search("car").contains("http://fancycar.com"));
-//		assertTrue(goggles.search("car").contains("http://cashanddrive.com"));
-//		assertFalse(goggles.search("car").contains("http://notyourmothersicecream.com"));
-//		assertFalse(goggles.search("car").contains("http://mothersicecream.com"));
-//
-//		// If there are no search results for a given keyword, the engine returns an empty list
-//		assertNotNull(goggles.search("404"));
-//		assertTrue(goggles.search("404") instanceof List);
-//		assertTrue(goggles.search("404").isEmpty());
-//
-//		// Make sure malicious hackers cannot break your search engine
-//		// so do not hand out your data structures.
-//		// Hint: think of Harbor
-//		// Pro Tip: use a list constructor
-//		goggles.search("car").clear();
-//		assertEquals(3, goggles.search("car").size());	
-	}
+	
+	@Test
+	public void testSearchEngine()
+	{
+		// In this scenario we are creating an Internet search engine
+		// which returns multiple results for each search keyword.
+		// This implies that a search engine has-many search results.
+		// Hint: this requires multiple data structures collaborating
+		SearchEngine goggles = new SearchEngine();
+		
+		goggles.addSearchResult("ice cream", "http://mothersicecream.com");
+		assertTrue(goggles.search("ice cream") instanceof List);
+		assertEquals(1, goggles.search("ice cream").size());
+		goggles.addSearchResult("ice cream", "http://notyourmothersicecream.com");
+		assertEquals(2, goggles.search("ice cream").size());
+		
+		goggles.addSearchResult("car", "http://foundontheroaddead.com");
+		goggles.addSearchResult("car", "http://cashanddrive.com");
+		goggles.addSearchResult("car", "http://fancycar.com");
+		
+		assertTrue(goggles.search("ice cream").contains("http://notyourmothersicecream.com"));
+		assertTrue(goggles.search("ice cream").contains("http://mothersicecream.com"));
+		assertFalse(goggles.search("ice cream").contains("http://foundontheroaddead.com"));
+		assertFalse(goggles.search("ice cream").contains("http://fancycar.com"));
+		assertFalse(goggles.search("ice cream").contains("http://cashanddrive.com"));
+		
+		assertTrue(goggles.search("car").contains("http://foundontheroaddead.com"));
+		assertTrue(goggles.search("car").contains("http://fancycar.com"));
+		assertTrue(goggles.search("car").contains("http://cashanddrive.com"));
+		assertFalse(goggles.search("car").contains("http://notyourmothersicecream.com"));
+		assertFalse(goggles.search("car").contains("http://mothersicecream.com"));
+
+		// If there are no search results for a given keyword, the engine returns an empty list
+		assertNotNull(goggles.search("404"));
+		assertTrue(goggles.search("404") instanceof List);
+		assertTrue(goggles.search("404").isEmpty());
+
+		// Make sure malicious hackers cannot break your search engine
+		// so do not hand out your data structures.
+		// Hint: think of Harbor
+		// Pro Tip: use a list constructor
+		goggles.search("car").clear();
+		assertEquals(3, goggles.search("car").size());	
+	}}
 	
  
