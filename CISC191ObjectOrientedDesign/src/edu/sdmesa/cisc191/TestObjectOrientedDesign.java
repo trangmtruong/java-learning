@@ -68,17 +68,17 @@ class TestObjectOrientedDesign
       assertEquals(2, car.getNumberOfDoors());
    }
 
-//   @Test
-//   void testPickupTruck()
-//   {
-//      PickupTruck truck = new PickupTruck("Dodge", 9000, 65995, 3, null, 1400);
-//
-//      assertEquals("Dodge", truck.getManufacturerName());
-//      assertEquals(9000, truck.getMilesOnVehicle());
-//      assertEquals(65995, truck.getPrice());
-//      assertEquals(3, truck.getNumberOfSeats());
-//      assertEquals(1400, truck.getCargoCapacity());
-//   }
+   @Test
+   void testPickupTruck()
+   {
+      PickupTruck truck = new PickupTruck("Dodge", 9000, 65995, 3, null, 1400);
+
+      assertEquals("Dodge", truck.getManufacturerName());
+      assertEquals(9000, truck.getMilesOnVehicle());
+      assertEquals(65995, truck.getPrice());
+      assertEquals(3, truck.getNumberOfSeats());
+      assertEquals(1400, truck.getCargoCapacity());
+   }
 
 //   @Test
 //   void testSportsUtilityVehicle()
