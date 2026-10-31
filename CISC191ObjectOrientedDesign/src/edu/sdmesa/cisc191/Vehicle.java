@@ -16,7 +16,7 @@ package edu.sdmesa.cisc191;
  * 
  *         Version/date: 10/30/26
  * 
- *         Responsibilities of class: CISC191
+ *         Responsibilities of class: stores a Vehicle's info 
  * 		
  */
 

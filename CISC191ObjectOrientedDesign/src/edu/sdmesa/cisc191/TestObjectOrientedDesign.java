@@ -56,17 +56,17 @@ class TestObjectOrientedDesign
       assertEquals("Leather", vehicle.getOptions()[1].getDescription());
    }
 
-//   @Test
-//   void testCar()
-//   {
-//      Car car = new Car("BMW", 190000, 5995, 4, null, 2);
-//
-//      assertEquals("BMW", car.getManufacturerName());
-//      assertEquals(190000, car.getMilesOnVehicle());
-//      assertEquals(5995, car.getPrice());
-//      assertEquals(4, car.getNumberOfSeats());
-//      assertEquals(2, car.getNumberOfDoors());
-//   }
+   @Test
+   void testCar()
+   {
+      Car car = new Car("BMW", 190000, 5995, 4, null, 2);
+
+      assertEquals("BMW", car.getManufacturerName());
+      assertEquals(190000, car.getMilesOnVehicle());
+      assertEquals(5995, car.getPrice());
+      assertEquals(4, car.getNumberOfSeats());
+      assertEquals(2, car.getNumberOfDoors());
+   }
 
 //   @Test
 //   void testPickupTruck()
