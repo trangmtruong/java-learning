@@ -80,17 +80,17 @@ class TestObjectOrientedDesign
       assertEquals(1400, truck.getCargoCapacity());
    }
 
-//   @Test
-//   void testSportsUtilityVehicle()
-//   {
-//      SportsUtilityVehicle suv = new SportsUtilityVehicle("Toyota", 19000, 75995, 6, null, 4500);
-//
-//      assertEquals("Toyota", suv.getManufacturerName());
-//      assertEquals(19000, suv.getMilesOnVehicle());
-//      assertEquals(75995, suv.getPrice());
-//      assertEquals(6, suv.getNumberOfSeats());
-//      assertEquals(4500, suv.getMaxTowingWeight());
-//   }
+   @Test
+   void testSportsUtilityVehicle()
+   {
+      SportsUtilityVehicle suv = new SportsUtilityVehicle("Toyota", 19000, 75995, 6, null, 4500);
+
+      assertEquals("Toyota", suv.getManufacturerName());
+      assertEquals(19000, suv.getMilesOnVehicle());
+      assertEquals(75995, suv.getPrice());
+      assertEquals(6, suv.getNumberOfSeats());
+      assertEquals(4500, suv.getMaxTowingWeight());
+   }
 
 //   @Test
 //   void testGasCar()
