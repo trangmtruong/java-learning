@@ -28,9 +28,52 @@ package edu.sdmesa.cisc191;
 public class Vehicle
 {
 	// TODO: Implement and comment all HAS-A relationships separately
+	private String manufacturerName; //HAS-A manufacturerName
+	private int milesOnVehicle; //HAS-A milesOnVehicle
+	private int price; // HAS-A price
+	private int numberOfSeats; // HAS-A numberOfSeats
+	private Option[] options = null; //HAS-MANY options
 
 	// TODO Implement a constructor
+	
+	public Vehicle(String manufacturerName, int milesOnVehicle,int price, int numberOfSeats, Option[] options) 
+	{
+		this.manufacturerName = manufacturerName;
+		this.milesOnVehicle = milesOnVehicle;
+		this.price = price;
+		this.numberOfSeats = numberOfSeats;
+		this.options = options;
+		
+		
+		
+	}
 
 	// TODO Implement all the methods from the UML
+	
+	//get methods
+	public String getManufacturerName()
+	{
+		return manufacturerName;
+	}
+	
+	public int getMilesOnVehicle()
+	{
+		return milesOnVehicle;
+	}
+	
+	public int getPrice()
+	{
+		return price;
+	}
+	
+	public int getNumberOfSeats()
+	{
+		return numberOfSeats;
+	}
+	
+	public Option[] getOptions()
+	{
+		return options;
+	}
 
 }
