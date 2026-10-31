@@ -4,39 +4,35 @@ package edu.sdmesa.cisc191;
 
 /**
  * Lead Author(s):
- * @author 
- * @author 
- * <<add additional lead authors here, with a full first and last name>>
  * 
- * Other contributors:
- * <<add additional contributors (mentors, tutors, friends) here, with contact information>>
+ * @author Mia Truong
  * 
- * References:
- * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
- * Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+ *         References:
+ *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented
+ *         Problem Solving.
+ *         Retrieved from
+ *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
- * <<add more references here>>
- *  
- * Version/date: 
  * 
- * Responsibilities of class:
+ *         Version/date: 10/30/26
  * 
+ *         Responsibilities of class: CISC191
+ * 		
  */
 
-// TODO: Implement and comment all IS-A and IS relationships separately
-
-public class Vehicle
+public class Vehicle // IS-A Object
 {
-	// TODO: Implement and comment all HAS-A relationships separately
-	private String manufacturerName; //HAS-A manufacturerName
-	private int milesOnVehicle; //HAS-A milesOnVehicle
+	
+	private String manufacturerName; // HAS-A manufacturerName
+	private int milesOnVehicle; // HAS-A milesOnVehicle
 	private int price; // HAS-A price
 	private int numberOfSeats; // HAS-A numberOfSeats
-	private Option[] options = null; //HAS-MANY options
-
-	// TODO Implement a constructor
+	private Option[] options = null; // HAS-MANY options
 	
-	public Vehicle(String manufacturerName, int milesOnVehicle,int price, int numberOfSeats, Option[] options) 
+	// constructor
+	
+	public Vehicle(String manufacturerName, int milesOnVehicle, int price,
+			int numberOfSeats, Option[] options)
 	{
 		this.manufacturerName = manufacturerName;
 		this.milesOnVehicle = milesOnVehicle;
@@ -44,13 +40,9 @@ public class Vehicle
 		this.numberOfSeats = numberOfSeats;
 		this.options = options;
 		
-		
-		
 	}
-
-	// TODO Implement all the methods from the UML
 	
-	//get methods
+	// get methods
 	public String getManufacturerName()
 	{
 		return manufacturerName;
@@ -75,5 +67,5 @@ public class Vehicle
 	{
 		return options;
 	}
-
+	
 }

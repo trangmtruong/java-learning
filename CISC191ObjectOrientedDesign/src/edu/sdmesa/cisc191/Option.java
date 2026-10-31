@@ -1,31 +1,36 @@
 /**
-* Lead Author(s):
-* @author trangmtruong; student ID
-* @author Full name; student ID
-* <<Add additional lead authors here>>
-*
-* Other Contributors:
-* Full name; student ID or contact information if not in class
-* <<Add additional contributors (mentors, tutors, friends) here, with contact information>>
-*
-* References:
-* Morelli, R., & Walde, R. (2016).
-* Java, Java, Java: Object-Oriented Problem Solving
-* https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
-*
-* <<Add more references here>>
-*
-* Version: 2026-10-30
-*/
+ * Lead Author(s):
+ * 
+ * @author Mia Truong
+ * 
+ *         References:
+ *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented
+ *         Problem Solving.
+ *         Retrieved from
+ *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+ * 
+ * 
+ *         Version/date: 10/30/26
+ * 
+ *         Responsibilities of class: stores a text description of vehicle's
+ *         add-on options
+ * 
+ */
 package edu.sdmesa.cisc191;
 
-/**
- * Purpose: The reponsibility of Option is ...
- *
- * Option is-a ...
- * Option is ...
- */
-public class Option
+public class Option // IS-A Object
 {
+	private String description; // HAS-A description;
 	
+	// constructor
+	public Option(String description)
+	{
+		this.description = description;
+	}
+	
+	// get method
+	public String getDescription()
+	{
+		return description;
+	}
 }

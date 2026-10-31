@@ -42,19 +42,19 @@ class TestObjectOrientedDesign
       assertEquals(4, vehicle.getNumberOfSeats());
    }
 
-//   @Test
-//   void testOptions()
-//   {
-//      Option moonroof = new Option("Moonroof");
-//      assertEquals("Moonroof", moonroof.getDescription());
-//      Option leather = new Option("Leather");
-//      assertEquals("Leather", leather.getDescription());
-//      Option[] options = { moonroof, leather };
-//      Vehicle vehicle = new Vehicle("BMW", 90000, 10995, 4, options);
-//
-//      assertEquals("Moonroof", vehicle.getOptions()[0].getDescription());
-//      assertEquals("Leather", vehicle.getOptions()[1].getDescription());
-//   }
+   @Test
+   void testOptions()
+   {
+      Option moonroof = new Option("Moonroof");
+      assertEquals("Moonroof", moonroof.getDescription());
+      Option leather = new Option("Leather");
+      assertEquals("Leather", leather.getDescription());
+      Option[] options = { moonroof, leather };
+      Vehicle vehicle = new Vehicle("BMW", 90000, 10995, 4, options);
+
+      assertEquals("Moonroof", vehicle.getOptions()[0].getDescription());
+      assertEquals("Leather", vehicle.getOptions()[1].getDescription());
+   }
 
 //   @Test
 //   void testCar()
