@@ -136,28 +136,28 @@ class TestGoneFishing
 //				|| model.getFishRemaining() == 9);
 //	}
 //
-//	@Test
-//	void testGoneFishingButtonListener()
-//	{
-//		GoneFishingModel model = new GoneFishingModel();
-//		GoneFishingView view = new GoneFishingView();
-//		GoneFishingController controller = new GoneFishingController(model,
-//				view);
-//		FishingButton fishingButton = new FishingButton(1, 2);
-//		FishingButtonListener listener = new FishingButtonListener(controller,
-//				fishingButton);
-//		String buttonTextBefore = fishingButton.getText();
-//		// Click the button
-//		fishingButton.doClick();
-//		// Button text should change
-//		assertNotEquals(buttonTextBefore, fishingButton.getText());
-//		// There should be one less tries remaining
-//		assertEquals(29, model.getTriesRemaining());
-//		// There should be nine or ten fish remaining depending on whether we
-//		// caught anything.
-//		assertTrue(model.getFishRemaining() == 10
-//				|| model.getFishRemaining() == 9);
-//	}
+	@Test
+	void testGoneFishingButtonListener()
+	{
+		GoneFishingModel model = new GoneFishingModel();
+		GoneFishingView view = new GoneFishingView();
+		GoneFishingController controller = new GoneFishingController(model,
+				view);
+		FishingButton fishingButton = new FishingButton(1, 2);
+		FishingButtonListener listener = new FishingButtonListener(controller,
+				fishingButton);
+		String buttonTextBefore = fishingButton.getText();
+		// Click the button
+		fishingButton.doClick();
+		// Button text should change
+		assertNotEquals(buttonTextBefore, fishingButton.getText());
+		// There should be one less tries remaining
+		assertEquals(29, model.getTriesRemaining());
+		// There should be nine or ten fish remaining depending on whether we
+		// caught anything.
+		assertTrue(model.getFishRemaining() == 10
+				|| model.getFishRemaining() == 9);
+	}
 //
 //	@Test
 //	void testTriesAndFishRemaining()

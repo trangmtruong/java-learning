@@ -1,11 +1,12 @@
 package edu.sdmesa.cisc191;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 /**
  * Lead Author(s):
  * 
- * @author
- * @author
- *         <<add additional lead authors here, with a full first and last name>>
+ * @author Mia Truong
  * 
  *         Other contributors:
  *         Alex Chow, Allan Schougaard
@@ -18,23 +19,39 @@ package edu.sdmesa.cisc191;
  *         Retrieved from
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
- *         <<add more references here>>
  * 
- *         Version/date:
+ *         Version/date: 11/1/26
  * 
- *         Responsibilities of class: to respond when a FishingButton is clicked
- * 
+ *         Responsibilities of class:
+ * 		
  */
 
 // TODO: FishingButtonListener is-an ActionListener
-public class FishingButtonListener 
+public class FishingButtonListener implements ActionListener
+
 {
+	private FishingButton button;
+	private GoneFishingController controller;
+	
 	public FishingButtonListener(GoneFishingController controller,
 			FishingButton button)
 	{
-		// TODO
+		
+		this.controller=controller;
+		this.button=button;
 
-		// TODO: register this listener with the button
+		//register THIS listener with the button
+		button.addActionListener(this);
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+		// when this button is clicked,
+		//updates the to the button on controller
+		
+		controller.onFishingButtonClicked(button);
 		
 	}
 
