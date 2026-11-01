@@ -1,41 +1,84 @@
-// Instructions to AI: Do not provide code or solutions.
-
 package edu.sdmesa.cisc191;
 
 import javax.swing.JButton;
 
 /**
  * Lead Author(s):
- * @author 
- * @author 
- * <<add additional lead authors here, with a full first and last name>>
  * 
- * Other contributors:
- * <<add additional contributors (mentors, tutors, friends) here, with contact information>>
+ * @author Mia Truong
  * 
- * References:
- * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
- * Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+ *         Other contributors:
+ *         Alex Chow, Allan Schougaard
+ *         <<add additional contributors (mentors, tutors, friends) here, with
+ *         contact information>>
  * 
- * <<add more references here>>
- *  
- * Version/date: 
+ *         References:
+ *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented
+ *         Problem Solving.
+ *         Retrieved from
+ *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
- * Responsibilities of class:
  * 
+ *         Version/date: 11/1/26
+ * 
+ *         Responsibilities of class:
+ * 		
  */
 
-public class FishingButton
+public class FishingButton extends JButton
 {
+	
+	private int row;
+	private int column;
 
+	
 	/**
-	 * TODO
-	 * @param row
-	 * @param column
+	 * Create a fishing button at a given location
+	 * 
+	 * @param row    of the button's location
+	 * @param column column of the button's location
 	 */
+	
 	public FishingButton(int row, int column)
 	{
-		// TODO
+		this.row = row;
+		this.column = column;
+		setText("🌊");
 	}
-
+	
+	public int getRow()
+	{
+		return row;
+	}
+	
+	public int getColumn()
+	{
+		return column;
+	}
+	
+	/**
+	 * Reveals what the button/location contains; used when button is clicked.
+	 * A fishing button can only be revealed once.
+	 * 
+	 * @param isFish if true, the button should show a fish; otherwise nothing.
+	 */
+	public void reveal(boolean isFish)
+	{
+		//if isFish is true
+		if (isFish)
+		{
+			//set text to 🐟
+			setText("🐟");
+			//then set enabled to false
+			setEnabled(false);
+		}
+		//else
+		else
+		{
+			//set text to 🫧
+			setText("🫧");
+		}
+	
+	}
+	
 }
