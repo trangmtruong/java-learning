@@ -92,17 +92,17 @@ class TestObjectOrientedDesign
       assertEquals(4500, suv.getMaxTowingWeight());
    }
 
-//   @Test
-//   void testGasCar()
-//   {
-//      GasCar car = new GasCar("BMW", 5500, 75995, 4, null, 2);
-//
-//      assertEquals("BMW", car.getManufacturerName());
-//      assertEquals(5500, car.getMilesOnVehicle());
-//      assertEquals(75995, car.getPrice());
-//      assertEquals(4, car.getNumberOfSeats());
-//      assertEquals(2, car.getNumberOfDoors());
-//   }
+   @Test
+   void testGasCar()
+   {
+      GasCar car = new GasCar("BMW", 5500, 75995, 4, null, 2);
+
+      assertEquals("BMW", car.getManufacturerName());
+      assertEquals(5500, car.getMilesOnVehicle());
+      assertEquals(75995, car.getPrice());
+      assertEquals(4, car.getNumberOfSeats());
+      assertEquals(2, car.getNumberOfDoors());
+   }
 
 //   @Test
 //   void testCarIsCombustible()
