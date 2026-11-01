@@ -135,23 +135,23 @@ class TestObjectOrientedDesign
       assertEquals(2, car.getNumberOfDoors());
    }
 
-//   @Test
-//   void testCarIsChargeable()
-//   {
-//      Chargeable chargeable = new ElectricCar("Nissan", 10000, 35995, 4, null, 2);
-//      assertEquals(0, chargeable.getBatteryCharge());      
-//      chargeable.chargeUp(10);
-//      assertEquals(10, chargeable.getBatteryCharge());
-//      chargeable.chargeUp(10);
-//      assertEquals(20, chargeable.getBatteryCharge());
-//      chargeable.chargeUp(50);
-//      assertEquals(70, chargeable.getBatteryCharge());
-//      chargeable.chargeUp(50);
-//      assertEquals(100, chargeable.getBatteryCharge());
-//      ElectricCar car = new ElectricCar("VW", 5500, 75995, 4, null, 2);
-//      car.chargeUp(100);
-//      assertEquals(100, car.getBatteryCharge());
-//   }
+   @Test
+   void testCarIsChargeable()
+   {
+      Chargeable chargeable = new ElectricCar("Nissan", 10000, 35995, 4, null, 2);
+      assertEquals(0, chargeable.getBatteryCharge());      
+      chargeable.chargeUp(10);
+      assertEquals(10, chargeable.getBatteryCharge());
+      chargeable.chargeUp(10);
+      assertEquals(20, chargeable.getBatteryCharge());
+      chargeable.chargeUp(50);
+      assertEquals(70, chargeable.getBatteryCharge());
+      chargeable.chargeUp(50);
+      assertEquals(100, chargeable.getBatteryCharge());
+      ElectricCar car = new ElectricCar("VW", 5500, 75995, 4, null, 2);
+      car.chargeUp(100);
+      assertEquals(100, car.getBatteryCharge());
+   }
    
 // @Test
 // void testHybridCarIsCombustibleAndChargeable()

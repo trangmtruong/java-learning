@@ -18,7 +18,7 @@
  */
 package edu.sdmesa.cisc191;
 
-public class GasCar extends Car  implements Combustible // IS-A child of Car
+public class GasCar extends Car  implements Combustible // IS-A child of Car and is combustible
 {
 	private int fuelLevel= 0;
 	
@@ -34,15 +34,18 @@ public class GasCar extends Car  implements Combustible // IS-A child of Car
 	@Override
 	public int getFuelLevel()
 	{
+	
 		return fuelLevel;
 	}
 	@Override
 	public void addFuel(int fuelAdd)
 	{
+		//add field into the existing fuelLevel
 		fuelLevel += fuelAdd;
-		//if fuel level is =< 50,
+		//if fuel level is >50,
 		if(fuelLevel>50)
 		{
+			//return fuelLevel to 50
 			fuelLevel =50;
 		}
 		

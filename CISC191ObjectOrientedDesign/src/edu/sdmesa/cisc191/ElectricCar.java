@@ -18,9 +18,10 @@
  */
 package edu.sdmesa.cisc191;
 
-public class ElectricCar extends Car // IS-A child of a Car
+public class ElectricCar extends Car  implements Chargeable// IS-A child of a Car
 {
-	
+	 private int batteryCharge =0;
+	 
 	// constructor
 	public ElectricCar(String manufacturerName, int milesOnVehicle, int price,
 			int numberOfSeats, Option[] options, int numberOfDoors)
@@ -28,6 +29,30 @@ public class ElectricCar extends Car // IS-A child of a Car
 		super(manufacturerName, milesOnVehicle, price, numberOfSeats, options,
 				numberOfDoors);
 	
+	}
+
+	@Override
+	public int getBatteryCharge()
+	{
+		return batteryCharge;
+	}
+
+	@Override
+	public void chargeUp(int chargeAdd)
+	{
+		
+		{
+			//add charge into the existing battery charge
+			batteryCharge += chargeAdd;
+			//if battery charge is >50,
+			if(batteryCharge>100)
+			{
+				//return batteryCharge to 100
+				batteryCharge =100;
+			}
+			
+			
+		}
 	}
 	
 }

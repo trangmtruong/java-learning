@@ -4,27 +4,22 @@ package edu.sdmesa.cisc191;
 
 /**
  * Lead Author(s):
- * @author 
- * @author 
- * <<add additional lead authors here, with a full first and last name>>
  * 
- * Other contributors:
- * <<add additional contributors (mentors, tutors, friends) here, with contact information>>
+ * @author Mia Truong
  * 
- * References:
- * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
- * Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+ *         References:
+ *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented
+ *         Problem Solving.
+ *         Retrieved from
+ *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
- * <<add more references here>>
- *  
- * Version/date: 
  * 
- * Responsibilities of class:
+ *         Version/date: 10/31/26
  * 
- */
-/**
- */
+ *         Responsibilities of interface: Chargeable is an interface
+ **/
 public interface Chargeable
 {
-	// TODO fill in the methods
+	int getBatteryCharge();
+	void chargeUp(int chargeAdd);
 }
