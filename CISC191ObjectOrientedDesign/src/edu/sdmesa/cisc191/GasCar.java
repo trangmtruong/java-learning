@@ -12,20 +12,41 @@
  * 
  *         Version/date: 10/31/26
  * 
- *         Responsibilities of class: GasCar represents a Car, and has number of doors, fuel level, a tank
- *      
+ *         Responsibilities of class: GasCar represents a Car, and has number of
+ *         doors, fuel level, a tank
+ * 		
  */
 package edu.sdmesa.cisc191;
 
-public class GasCar extends Car //IS-A child of Car
+public class GasCar extends Car  implements Combustible // IS-A child of Car
 {
-	//constructor
+	private int fuelLevel= 0;
+	
+	// constructor
 	
 	public GasCar(String manufacturerName, int milesOnVehicle, int price,
 			int numberOfSeats, Option[] options, int numberOfDoors)
-{
-		super(manufacturerName, milesOnVehicle, price, numberOfSeats, options, numberOfDoors);
-}
-
-
+	{
+		super(manufacturerName, milesOnVehicle, price, numberOfSeats, options,
+				numberOfDoors);
+	}
+	
+	@Override
+	public int getFuelLevel()
+	{
+		return fuelLevel;
+	}
+	@Override
+	public void addFuel(int fuelAdd)
+	{
+		fuelLevel += fuelAdd;
+		//if fuel level is =< 50,
+		if(fuelLevel>50)
+		{
+			fuelLevel =50;
+		}
+		
+		
+	}
+	
 }

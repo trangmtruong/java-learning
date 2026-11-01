@@ -22,6 +22,7 @@ public class Car extends Vehicle //IS-A child of Vehicle
 {
 	private int numberOfDoors; // HAS-A numberOfDoors
 	
+	
 	//constructor
 	public Car(String manufacturerName, int milesOnVehicle, int price,
 			int numberOfSeats, Option[] options, int numberOfDoors)
@@ -35,4 +36,6 @@ public class Car extends Vehicle //IS-A child of Vehicle
 	{
 		return numberOfDoors;
 	}
+	
+
 }

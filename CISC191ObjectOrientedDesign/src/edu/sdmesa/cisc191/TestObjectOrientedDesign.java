@@ -104,24 +104,24 @@ class TestObjectOrientedDesign
       assertEquals(2, car.getNumberOfDoors());
    }
 
-//   @Test
-//   void testCarIsCombustible()
-//   {
-//	  GasCar car = new GasCar("VW", 5500, 75995, 4, null, 2);
-//	  assertEquals(0, car.getFuelLevel());
-//	  Combustible combustible = new GasCar("VW", 15500, 45995, 4, null, 2);
-//	  // Fuel capacity is 50 units
-//	  combustible.addFuel(10);
-//	  assertEquals(10, combustible.getFuelLevel());
-//	  combustible.addFuel(10);
-//	  assertEquals(20, combustible.getFuelLevel());
-//	  combustible.addFuel(30);
-//	  assertEquals(50, combustible.getFuelLevel());
-//	  combustible.addFuel(30);
-//	  assertEquals(50, combustible.getFuelLevel());
-//	  combustible.addFuel(30);
-//	  assertEquals(50, combustible.getFuelLevel());
-//   }
+   @Test
+   void testCarIsCombustible()
+   {
+	  GasCar car = new GasCar("VW", 5500, 75995, 4, null, 2);
+	  assertEquals(0, car.getFuelLevel());
+	  Combustible combustible = new GasCar("VW", 15500, 45995, 4, null, 2);
+	  // Fuel capacity is 50 units
+	  combustible.addFuel(10);
+	  assertEquals(10, combustible.getFuelLevel());
+	  combustible.addFuel(10);
+	  assertEquals(20, combustible.getFuelLevel());
+	  combustible.addFuel(30);
+	  assertEquals(50, combustible.getFuelLevel());
+	  combustible.addFuel(30);
+	  assertEquals(50, combustible.getFuelLevel());
+	  combustible.addFuel(30);
+	  assertEquals(50, combustible.getFuelLevel());
+   }
 
    @Test
    void testElectricCar()
