@@ -54,5 +54,12 @@ public class ElectricCar extends Car  implements Chargeable// IS-A child of a Ca
 			
 		}
 	}
+
+	@Override
+	public void chargeUp()
+	{
+		
+		
+	}
 	
 }

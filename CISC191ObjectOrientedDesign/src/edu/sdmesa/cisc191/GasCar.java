@@ -18,9 +18,10 @@
  */
 package edu.sdmesa.cisc191;
 
-public class GasCar extends Car  implements Combustible // IS-A child of Car and is combustible
+public class GasCar extends Car implements Combustible // IS-A child of Car and is combustible
 {
 	private int fuelLevel= 0;
+	private int batteryCharge =0;
 	
 	// constructor
 	
@@ -50,6 +51,12 @@ public class GasCar extends Car  implements Combustible // IS-A child of Car and
 		}
 		
 		
+	}
+
+
+	public void tankUp() 
+	{
+		fuelLevel += fuelLevel+50;
 	}
 	
 }

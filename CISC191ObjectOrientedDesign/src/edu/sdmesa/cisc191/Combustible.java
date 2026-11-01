@@ -21,4 +21,5 @@ public interface Combustible
 	int getFuelLevel();
 	
 	void addFuel(int fuelLevel);
+	void tankUp() ;
 }

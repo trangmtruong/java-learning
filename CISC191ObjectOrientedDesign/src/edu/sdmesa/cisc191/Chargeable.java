@@ -22,4 +22,5 @@ public interface Chargeable
 {
 	int getBatteryCharge();
 	void chargeUp(int chargeAdd);
+	void chargeUp();
 }
