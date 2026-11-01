@@ -10,15 +10,14 @@
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
  * 
- *         Version/date: 10/30/26
+ *         Version/date: 10/31/26
  * 
  *         Responsibilities of class: GasCar represents a Car, and has number of doors, fuel level, a tank
- *       
- * 		
+ *      
  */
 package edu.sdmesa.cisc191;
 
-public class GasCar extends Car
+public class GasCar extends Car //IS-A child of Car
 {
 	//constructor
 	

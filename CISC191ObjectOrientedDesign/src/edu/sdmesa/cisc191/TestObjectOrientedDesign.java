@@ -123,17 +123,17 @@ class TestObjectOrientedDesign
 //	  assertEquals(50, combustible.getFuelLevel());
 //   }
 
-//   @Test
-//   void testElectricCar()
-//   {
-//      ElectricCar car = new ElectricCar("Nissan", 10000, 35995, 4, null, 2);
-//
-//      assertEquals("Nissan", car.getManufacturerName());
-//      assertEquals(10000, car.getMilesOnVehicle());
-//      assertEquals(35995, car.getPrice());
-//      assertEquals(4, car.getNumberOfSeats());
-//      assertEquals(2, car.getNumberOfDoors());
-//   }
+   @Test
+   void testElectricCar()
+   {
+      ElectricCar car = new ElectricCar("Nissan", 10000, 35995, 4, null, 2);
+
+      assertEquals("Nissan", car.getManufacturerName());
+      assertEquals(10000, car.getMilesOnVehicle());
+      assertEquals(35995, car.getPrice());
+      assertEquals(4, car.getNumberOfSeats());
+      assertEquals(2, car.getNumberOfDoors());
+   }
 
 //   @Test
 //   void testCarIsChargeable()
