@@ -41,10 +41,10 @@ public class ElectricCar extends Car  implements Chargeable// IS-A child of a Ca
 	public void chargeUp(int chargeAdd)
 	{
 		
-		{
+		
 			//add charge into the existing battery charge
 			batteryCharge += chargeAdd;
-			//if battery charge is >50,
+			//if battery charge is >100,
 			if(batteryCharge>100)
 			{
 				//return batteryCharge to 100
@@ -52,13 +52,13 @@ public class ElectricCar extends Car  implements Chargeable// IS-A child of a Ca
 			}
 			
 			
-		}
+		
 	}
 
 	@Override
 	public void chargeUp()
 	{
-		
+		batteryCharge=100;
 		
 	}
 	

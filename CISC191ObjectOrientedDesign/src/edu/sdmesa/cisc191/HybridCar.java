@@ -20,6 +20,7 @@ package edu.sdmesa.cisc191;
 
 
 public class HybridCar extends GasCar implements Chargeable
+ //IS-A GasCar and Is Chargeable
 {
 	private int batteryCharge =0;
 
@@ -40,6 +41,15 @@ public class HybridCar extends GasCar implements Chargeable
 	@Override
 	public void chargeUp(int chargeAdd)
 	{
+		//add charge into the existing battery charge
+		batteryCharge += chargeAdd;
+		
+		if(batteryCharge>100)
+		{
+			//return batteryCharge to 100
+			batteryCharge =100;
+		}
+		
 	}
 	
 	@Override

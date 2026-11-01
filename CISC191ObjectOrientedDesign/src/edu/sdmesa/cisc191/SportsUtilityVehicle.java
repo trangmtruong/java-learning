@@ -12,7 +12,7 @@
  * 
  *         Version/date: 10/30/26
  * 
- *         Responsibilities of class: SportUtilityVehicle represents a Vehicle, and
+ *         Responsibilities of class: SportsUtilityVehicle represents a Vehicle, and
  *         tracks the max weight for towing
  * 		
  */

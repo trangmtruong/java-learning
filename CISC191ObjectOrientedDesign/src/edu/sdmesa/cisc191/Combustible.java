@@ -12,7 +12,7 @@
  * 
  *         Version/date: 10/31/26
  * 
- *         Responsibilities of interface: Combustible is an interface
+ *         Responsibilities of interface: Combustible is an interface. any class implements this interface can get its fuel level, add fuel, and tank up
  **/
 package edu.sdmesa.cisc191;
 

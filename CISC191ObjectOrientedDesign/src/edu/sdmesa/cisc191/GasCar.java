@@ -50,13 +50,11 @@ public class GasCar extends Car implements Combustible // IS-A child of Car and 
 			fuelLevel =50;
 		}
 		
-		
 	}
-
 
 	public void tankUp() 
 	{
-		fuelLevel += fuelLevel+50;
+		fuelLevel=50;
 	}
 	
 }

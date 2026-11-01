@@ -16,7 +16,7 @@ package edu.sdmesa.cisc191;
  * 
  *         Version/date: 10/31/26
  * 
- *         Responsibilities of interface: Chargeable is an interface
+ *         Responsibilities of interface: Chargeable is an interface. any class implements this interface can get its battery charge %, and charge up
  **/
 public interface Chargeable
 {
