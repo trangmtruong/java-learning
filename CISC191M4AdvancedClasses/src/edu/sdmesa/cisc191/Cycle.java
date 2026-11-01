@@ -99,18 +99,31 @@ public abstract class Cycle
 	{
 		return frameNumberCounter++;
 	}
+	
 	/**
 	 * @return true if the frame "numbers" are the same
 	 */
-	// @Override
-	// public boolean equals(Object other)
-	// {
-	// // TODO:
-	// // Hint: use instanceof
-	// // See:
-	// https://www.sitepoint.com/implement-javas-equals-method-correctly/
-	// return false;
-	// }
+	@Override
+	public boolean equals(Object other)
+	{
+		// Hint: use instanceof
+		// See:
+		// https://www.sitepoint.com/implement-javas-equals-method-correctly/
+		
+		// if other is NOT a Cycle
+		if (!(other instanceof Cycle))
+		{
+			// return false
+			return false;
+		}
+		
+		// casting
+		// treat other as a Cycle
+		Cycle otherCycle = (Cycle) other;
+		
+		// equal if have the same frame number
+		return this.getFrameNumber().equals(otherCycle.getFrameNumber());
+	}
 	
 	/**
 	 * @return String describing the object, including frame number and color
@@ -118,7 +131,6 @@ public abstract class Cycle
 	@Override
 	public String toString()
 	{
-		// TODO:
 		return getFrameNumber() + " " + getColor();
 	}
 	

@@ -15,7 +15,7 @@ import java.util.LinkedList;
  * 
  * Version/date: 10/23/2026
  * 
- * Responsibilities of class: 
+ * Responsibilities of class:  remove an item from LinkedList
  * 
 
 

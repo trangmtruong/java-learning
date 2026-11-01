@@ -1,21 +1,21 @@
 ///**
 //* Lead Author(s):
-//* @author Mia Truong
-
-//* References:
-//* Morelli, R., & Walde, R. (2016).
-//* Java, Java, Java: Object-Oriented Problem Solving
-//* https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
-//*
-//*
-//* Version: 2026-10-24
+////* @author Mia Truong
+//
+////* References:
+////* Morelli, R., & Walde, R. (2016).
+////* Java, Java, Java: Object-Oriented Problem Solving
+////* https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+////*
+////*
+////* Version: 2026-10-24
 
 package edu.sdmesa.cisc191;
 
 import java.util.Stack;
 
 /**
- * Purpose: The reponsibility of StringStackProducer is ...
+ * Purpose: The reponsibility of StringStackProducer is to produce a new item
  *
  ***/
 

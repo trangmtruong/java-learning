@@ -1,34 +1,21 @@
-/**
- * Lead Author(s):
- * 
- * @author trangmtruong; student ID
- * @author Full name; student ID
- *         <<Add additional lead authors here>>
- *		
- *         Other Contributors:
- *         Full name; student ID or contact information if not in class
- *         <<Add additional contributors (mentors, tutors, friends) here, with
- *         contact information>>
- *
- *         References:
- *         Morelli, R., & Walde, R. (2016).
- *         Java, Java, Java: Object-Oriented Problem Solving
- *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
- *
- *         <<Add more references here>>
- *		
- *         Version: 2026-10-25
- */
+///**
+//* Lead Author(s):
+////* @author Mia Truong
+//
+////* References:
+////* Morelli, R., & Walde, R. (2016).
+////* Java, Java, Java: Object-Oriented Problem Solving
+////* https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+////*
+////*
+////* Version: 2026-10-25
 package edu.sdmesa.cisc191;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Purpose: The reponsibility of PhoneDirectory is ...
- *
- * PhoneDirectory is-a ...
- * PhoneDirectory is ...
+ * Purpose: The reponsibility of PhoneDirectory is to add, set delete new contacts 
  */
 public class PhoneDirectory
 {

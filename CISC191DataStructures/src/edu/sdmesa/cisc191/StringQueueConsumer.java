@@ -19,10 +19,7 @@ package edu.sdmesa.cisc191;
 import java.util.Queue;
 
 /**
- * Purpose: The reponsibility of StringQueueConsumer is ...
- *
- * StringQueueConsumer is-a ...
- * StringQueueConsumer is ...
+ * Purpose: The reponsibility of StringQueueConsumer is to remove an item from Queue List
  */
 public class StringQueueConsumer implements Consumer<String>
 {

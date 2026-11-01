@@ -19,6 +19,8 @@
 */
 package edu.sdmesa.cisc191;
 
+import java.awt.Color;
+
 /**
  * Purpose: The reponsibility of BikeShopDemo is ...
  *
@@ -36,6 +38,26 @@ public class BikeShopDemo
 	{
 		BikeShop shop = new BikeShop("Mia's Bike Shop");
 		
+		Unicycle unicycle1 = new Unicycle("Mia's Unicycle");
+	
+		unicycle1.setColor(Color.red);
+		unicycle1.getMake();
+		shop.addToInventory(unicycle1);
+		shop.toString();
+		
+		
+		Bicycle bicycle1 = new Bicycle("Mia's Bicycle");
+		bicycle1.setColor(Color.blue);
+		shop.addToInventory(bicycle1);
+		shop.toString();
+		
+		ElectricMountainBike emb1=new ElectricMountainBike("Mia's EMB");
+		emb1.setColor(Color.green);
+		shop.addToInventory(emb1);
+		shop.toString();
+		
+		
+	
 		shop.getName();
 		
 		System.out.println(shop);
