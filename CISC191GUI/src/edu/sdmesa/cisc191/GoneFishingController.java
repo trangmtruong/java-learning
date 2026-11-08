@@ -3,28 +3,31 @@ package edu.sdmesa.cisc191;
 /**
  * Lead Author(s):
  * 
- * @author
- * @author <<add additional lead authors here, with a full first and last name>>
+ * @author Mia Truong
  * 
- *         Other contributors: 
+ *         Other contributors:
  *         Alex Chow, Allan Schougaard
- *         <<add additional contributors (mentors, tutors,
- *         friends) here, with contact information>>
+ *         <<add additional contributors (mentors, tutors, friends) here, with
+ *         contact information>>
  * 
- *         References: Morelli, R., & Walde, R. (2016). Java, Java, Java:
- *         Object-Oriented Problem Solving. Retrieved from
+ *         References:
+ *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented
+ *         Problem Solving.
+ *         Retrieved from
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
- *         <<add more references here>>
  * 
- *         Version/date:
+ *         Version/date: 11/7/26
  * 
  *         Responsibilities of class:
- * 
+ * 		
  */
 
-public class GoneFishingController 
+public class GoneFishingController
 {
+	private GoneFishingModel model;
+	private GoneFishingView view;
+	
 	/**
 	 * TODO
 	 * 
@@ -34,13 +37,16 @@ public class GoneFishingController
 	public GoneFishingController(GoneFishingModel goneFishingModel,
 			GoneFishingView goneFishingView)
 	{
-		// TODO: Initialize instance variables/fields here
-
+		
 		// TODO: After initializing the view, set maximum values
 		// for the sliders here
+		this.model = goneFishingModel;
+		this.view = goneFishingView;
+		view.setMaxFish(model.getFishRemaining());
+		view.setMaxTries(model.getTriesRemaining());
 		
 	}
-
+	
 	/**
 	 * Purpose: Handle the event of a fishing button being clicked.
 	 * 
@@ -48,11 +54,22 @@ public class GoneFishingController
 	 */
 	public void onFishingButtonClicked(FishingButton button)
 	{
-		// TODO: What should happen when a fishing button is clicked?
-		// Hint: The controller first tells the model what happened 
-		// and then tells views to update
-
+		// when a fishing button is clicked,
+		// asks the model if there's a fish at this button's spot
+		// stores true/false in variable caughtFish
+		boolean caughtFish = model.fishAt(button.getRow(), button.getColumn());
+		
+		// and then tells views to reveal
+		// if caughtFish is true, it'll reveal 🐟
+		// if caughtFish is false, it'll reveal 🫧
+		button.reveal(caughtFish);
+	
+		// update the number of fish left on view
+		view.updateFishRemaining(model.getFishRemaining());
+		
+		// update the number of tries left on view
+		view.updateTriesRemaining(model.getTriesRemaining());
+		
 	}
-
-
+	
 }

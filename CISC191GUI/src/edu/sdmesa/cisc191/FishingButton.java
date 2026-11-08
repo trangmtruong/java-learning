@@ -69,16 +69,18 @@ public class FishingButton extends JButton
 		{
 			//set text to 🐟
 			setText("🐟");
-			//then set enabled to false
-			setEnabled(false);
+	
 		}
 		//else
 		else
 		{
 			//set text to 🫧
 			setText("🫧");
+
 		}
-	
+		//then set enabled to false
+		//this un-enables the button after revealing the text
+		setEnabled(false);
 	}
 	
 }
