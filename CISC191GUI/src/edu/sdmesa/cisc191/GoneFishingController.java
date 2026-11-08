@@ -29,7 +29,6 @@ public class GoneFishingController
 	private GoneFishingView view;
 	
 	/**
-	 * TODO
 	 * 
 	 * @param goneFishingModel
 	 * @param goneFishingView
@@ -42,8 +41,15 @@ public class GoneFishingController
 		// for the sliders here
 		this.model = goneFishingModel;
 		this.view = goneFishingView;
+		// get # of fish remaining from model
+		// set it to the view
 		view.setMaxFish(model.getFishRemaining());
+		// get # of tries remaining from model
+		// set it to the view
 		view.setMaxTries(model.getTriesRemaining());
+		
+		// add listeners to the view
+		view.addListeners(this);
 		
 	}
 	
@@ -63,7 +69,7 @@ public class GoneFishingController
 		// if caughtFish is true, it'll reveal 🐟
 		// if caughtFish is false, it'll reveal 🫧
 		button.reveal(caughtFish);
-	
+		
 		// update the number of fish left on view
 		view.updateFishRemaining(model.getFishRemaining());
 		

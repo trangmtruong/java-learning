@@ -101,17 +101,17 @@ class TestGoneFishing
 		assertNotEquals(fishingButton.getText(), fishText);
 	}
 
-//	@Test 
-//	void testGoneFishingView()
-//	{
-//		GoneFishingView view = new GoneFishingView();
-//		assertTrue(view instanceof JFrame);
-//
-//		// We cannot check what the GUI looks like,
-//		// only that we can call the methods
-//		view.updateFishRemaining(11);
-//		view.updateTriesRemaining(10);
-//	}
+	@Test 
+	void testGoneFishingView()
+	{
+		GoneFishingView view = new GoneFishingView();
+		assertTrue(view instanceof JFrame);
+
+		// We cannot check what the GUI looks like,
+		// only that we can call the methods
+		view.updateFishRemaining(11);
+		view.updateTriesRemaining(10);
+	}
 
 	@Test
 	void testGoneFishingController()
