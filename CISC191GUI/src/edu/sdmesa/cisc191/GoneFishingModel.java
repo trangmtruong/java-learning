@@ -15,18 +15,18 @@ package edu.sdmesa.cisc191;
 
 import java.util.Random;
 
-// DIRECTIONS: Comment this code
-
-// TODO: comment each method and each line of code to show you understand how it
-// works
 
 public class GoneFishingModel
 {
-	// TODO: comment the code
-	
+	//fields
+	//declare variable DIMESION and set it to 6, cannot be changed
 	public static final int DIMENSION = 6;
+	//2D fishGrid array 
+	//stores true when there's a fish, false when there's no fish
 	private boolean[][] fishGrid = new boolean[DIMENSION][DIMENSION];
+	//starting number of tries
 	private int triesRemaining = 30;
+	//starting number of fish
 	private int fishRemaining = 10;
 
 	/**
@@ -35,19 +35,28 @@ public class GoneFishingModel
 	 */
 	public GoneFishingModel()
 	{
-		// TODO: comment the code
+		//creating a number generator
 		
 		Random randomNumberGenerator = new Random();
+		// for loop picks a random spot to hide each fish
+		// s it repeats 10 times
+		
+		//for loops starts at fishCounter =0,
+		//as long as the fishCounter is less than the # of fishRemaining
+		//increase cpunter every time
 		for (int fishCounter = 0; fishCounter < fishRemaining; fishCounter++)
 		{
-			int row, column;
-			// TODO: what does this loop do?
+			
+			int row, column; //variables to store row and columns
+			//do while loop picks a random row and column to hide each fish
 			do
 			{
+				//pic random row
 				row = randomNumberGenerator.nextInt(DIMENSION);
+				//pick a column
 				column = randomNumberGenerator.nextInt(DIMENSION);
-			} while (fishGrid[row][column]);
-			fishGrid[row][column] = true;
+			} while (fishGrid[row][column]); // while the spot has a fish, it will go back and pick a new random spot
+			fishGrid[row][column] = true; //put fish in that row and column if it's false (no fish in spot)
 		}
 	}
 
@@ -58,22 +67,30 @@ public class GoneFishingModel
 	 * @param column the column of the location
 	 * @return true if the there is a fish at the location; false if not.
 	 */
-	public boolean fishAt(int row, int column)
+	public boolean fishAt(int row, int column) //returns true or false
 	{
-		// TODO: comment the code
+		//if game is over
 		
 		if (isGameOver())
 		{
+			//throw an exception
 			throw new IllegalStateException("You cannot fish after the game is over");
 		}
+		//else
 		else
 		{
+			//subtract triesRemaining by 1
 			triesRemaining--;
+			
+			//checks if a fish is found, then store in foundFish
 			boolean foundFish = fishGrid[row][column];
+			//if find a fish
 			if (foundFish)
 			{
+				//-1 to the # of fishRemaining
 				fishRemaining--;
 			}
+			//return true or false
 			return foundFish;
 		}
 	}
@@ -83,7 +100,7 @@ public class GoneFishingModel
 	 */
 	public int getTriesRemaining()
 	{
-		// TODO: comment the code
+		//return the # of tries user has left
 		
 		return triesRemaining;
 	}
@@ -93,7 +110,7 @@ public class GoneFishingModel
 	 */
 	public int getFishRemaining()
 	{
-		// TODO: comment the code
+		//return the # of fish left in the game to find
 
 		return fishRemaining;
 	}
@@ -105,7 +122,9 @@ public class GoneFishingModel
 	 */
 	public boolean fishWin()
 	{
-		// TODO: comment the code
+		//when there's no more tries remaining
+		//AND there are more fish left
+		// return true bc fish win
 
 		return triesRemaining == 0 && fishRemaining > 0;
 	}
@@ -117,7 +136,8 @@ public class GoneFishingModel
 	 */
 	public boolean playerWins()
 	{
-		// TODO: comment the code
+		//when there's no fish left
+		//return true bc player wins if they get all fish
 
 		return fishRemaining == 0;
 	}
@@ -129,7 +149,8 @@ public class GoneFishingModel
 	 */
 	public boolean isGameOver()
 	{
-		// TODO: comment the code
+		//if either fish or player wins
+		//then game is over, return true
 
 		return fishWin() || playerWins();
 	}

@@ -22,10 +22,11 @@ import java.awt.event.ActionListener;
  * 
  *         Version/date: 11/1/26
  * 
- *         Responsibilities of class:
- * 		
+ *         Responsibilities of class: Listener to an action for when a
+ *         fishingButton is clicked and tells the controller that it has been
+ *         clicked
+ * 
  */
-
 
 public class FishingButtonListener implements ActionListener
 
@@ -37,24 +38,22 @@ public class FishingButtonListener implements ActionListener
 			FishingButton button)
 	{
 		
-		this.controller=controller;
-		this.button=button;
-
-		//register THIS listener with the button
+		this.controller = controller;
+		this.button = button;
+		
+		// register THIS listener with the button
 		button.addActionListener(this);
 		
 	}
-
+	
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
 		// when this button is clicked,
-		//updates the to the button on controller
+		// updates the to the button on controller
 		
 		controller.onFishingButtonClicked(button);
 		
 	}
-
-	// TODO: Override actionPerformed here to call the appropriate method on the controller.
-
+	
 }

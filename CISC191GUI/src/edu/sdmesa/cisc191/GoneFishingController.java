@@ -19,7 +19,9 @@ package edu.sdmesa.cisc191;
  * 
  *         Version/date: 11/7/26
  * 
- *         Responsibilities of class:
+ *         Responsibilities of class: middleman that helps model and view
+ *         communicate. When a button is clicked, controller asks the model for
+ *         result, and tells the view to update.
  * 		
  */
 
@@ -36,8 +38,6 @@ public class GoneFishingController
 	public GoneFishingController(GoneFishingModel goneFishingModel,
 			GoneFishingView goneFishingView)
 	{
-		
-		// TODO: After initializing the view, set maximum values
 		// for the sliders here
 		this.model = goneFishingModel;
 		this.view = goneFishingView;
@@ -76,17 +76,17 @@ public class GoneFishingController
 		// update the number of tries left on view
 		view.updateTriesRemaining(model.getTriesRemaining());
 		
-		//if the game is over
+		// if the game is over
 		if (model.isGameOver())
 		{
-			//ig player wins
+			// ig player wins
 			if (model.playerWins())
 			{
-				view.showGameOver("Game Over – You Win!");
+				view.showGameOver("Game Over - You Win!");
 			}
 			else
 			{
-				view.showGameOver("Game Over – Fishes Win!");
+				view.showGameOver("Game Over - Fishes Win!");
 			}
 		}
 		

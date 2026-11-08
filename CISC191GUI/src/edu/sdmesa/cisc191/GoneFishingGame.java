@@ -1,21 +1,24 @@
 /**
-* Lead Author(s):
-* @author Alex Chow
-* @author Allan Schougaard
-*
-* Other Contributors:
-* Full name; student ID or contact information if not in class
-* <<Add additional contributors (mentors, tutors, friends) here, with contact information>>
-*
-* References:
-* Morelli, R., & Walde, R. (2016).
-* Java, Java, Java: Object-Oriented Problem Solving
-* https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
-*
-* <<Add more references here>>
-*
-* Version: 2026-05-03
-*/
+ * Lead Author(s):
+ * 
+ * @author Mia Truong
+ * 
+ *         Other contributors:
+ *         Alex Chow, Allan Schougaard
+ *         <<add additional contributors (mentors, tutors, friends) here, with
+ *         contact information>>
+ * 
+ *         References:
+ *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented
+ *         Problem Solving.
+ *         Retrieved from
+ *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+ * 
+ * 
+ *         Version/date: 11/8/26
+ * 
+ * 		
+ */
 package edu.sdmesa.cisc191;
 
 import javax.swing.JOptionPane;
@@ -42,8 +45,9 @@ public class GoneFishingGame
 		}
 		catch (Exception exception)
 		{
-			// TODO: Alert the user as to what went wrong using a message dialog
-			// Hint: see the textbook excerpt supplied (yes, it has all the answers)
+		
+			//show message of the exception
+			JOptionPane.showMessageDialog(null, "Somerhing went wrong: " + exception);
 		}
 	}
 }

@@ -23,7 +23,7 @@ import javax.swing.JButton;
  * 
  *         Version/date: 11/1/26
  * 
- *         Responsibilities of class:
+ *         Responsibilities of class: Is a JButton that is a button on the grid that holds different texts that can be revealed (fish or no fish). button knows it's spot (row and col) on the grid
  * 		
  */
 

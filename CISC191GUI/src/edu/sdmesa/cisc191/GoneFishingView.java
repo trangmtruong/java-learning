@@ -30,7 +30,7 @@ import javax.swing.JSlider;
  * 
  *         Version/date: 11/7/26
  * 
- *         Responsibilities of class:
+ *         Responsibilities of class: is a JFrame that displays what users see. it has a grid of FishingButtons, 2 sliders, and labels
  * 		
  */
 
@@ -48,7 +48,6 @@ public class GoneFishingView extends JFrame
 	 */
 	public GoneFishingView()
 	{
-		// TODO: create and layout all the needed widgets with their listeners
 		
 		// set the title
 		setTitle("Gone Fishing");
