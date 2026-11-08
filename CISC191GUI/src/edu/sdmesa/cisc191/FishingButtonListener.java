@@ -26,7 +26,7 @@ import java.awt.event.ActionListener;
  * 		
  */
 
-// TODO: FishingButtonListener is-an ActionListener
+
 public class FishingButtonListener implements ActionListener
 
 {

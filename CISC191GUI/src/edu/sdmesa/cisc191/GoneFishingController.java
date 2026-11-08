@@ -76,6 +76,20 @@ public class GoneFishingController
 		// update the number of tries left on view
 		view.updateTriesRemaining(model.getTriesRemaining());
 		
+		//if the game is over
+		if (model.isGameOver())
+		{
+			//ig player wins
+			if (model.playerWins())
+			{
+				view.showGameOver("Game Over – You Win!");
+			}
+			else
+			{
+				view.showGameOver("Game Over – Fishes Win!");
+			}
+		}
+		
 	}
 	
 }

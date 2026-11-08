@@ -5,6 +5,8 @@ import java.awt.Font;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.GridLayout;
 import javax.swing.JPanel;
 import javax.swing.JSlider;
@@ -192,5 +194,12 @@ public class GoneFishingView extends JFrame
 		triesSlider.setValue(maxTries);
 		
 		
+	}
+	
+	
+	public void showGameOver(String message)
+	{
+		JOptionPane.showMessageDialog(this, message);
+		System.exit(0);
 	}
 }
