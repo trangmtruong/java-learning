@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.GridLayout;
 import javax.swing.JPanel;
+import javax.swing.JSlider;
 
 /**
  * Lead Author(s):
@@ -35,6 +36,8 @@ public class GoneFishingView extends JFrame
 {
 	// 2D array to store buttons
 	private FishingButton[][] buttons = new FishingButton[GoneFishingModel.DIMENSION][GoneFishingModel.DIMENSION];
+	private JSlider triesSlider;
+	private JSlider fishSlider;
 	
 	/**
 	 * Create GUI for game
@@ -95,6 +98,27 @@ public class GoneFishingView extends JFrame
 		//then add the panel to bottom
 		add(authorPanel,BorderLayout.SOUTH);
 		
+		//create sliders
+		triesSlider= new JSlider(JSlider.VERTICAL);
+		fishSlider= new JSlider(JSlider.VERTICAL);
+		
+		//creating labels for the sliders
+		JLabel triesLabel = new JLabel("Tries");
+		JLabel fishLabel = new JLabel("Fish");
+		
+		//creating a panel for the sliders
+		JPanel sliderPanel = new JPanel();
+		//add the sliders and labels to the panel
+		sliderPanel.add(triesSlider);
+		sliderPanel.add(triesLabel);
+		sliderPanel.add(fishSlider);
+		sliderPanel.add(fishLabel);
+		
+		//add the slider panel to the window, and position it to the right
+		add(sliderPanel, BorderLayout.EAST);
+		
+		
+		
 		// In the end do:
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		pack();
@@ -129,7 +153,7 @@ public class GoneFishingView extends JFrame
 	 */
 	public void updateFishRemaining(int fishRemaining)
 	{
-		// TODO
+		fishSlider.setValue(fishRemaining);
 		
 	}
 	
@@ -140,7 +164,7 @@ public class GoneFishingView extends JFrame
 	 */
 	public void updateTriesRemaining(int triesRemaining)
 	{
-		// TODO
+		triesSlider.setValue(triesRemaining);
 		
 	}
 	
@@ -151,7 +175,9 @@ public class GoneFishingView extends JFrame
 	 */
 	public void setMaxFish(int maxFish)
 	{
-		// TODO
+		fishSlider.setMaximum(maxFish);
+		fishSlider.setValue(maxFish);
+		
 		
 	}
 	
@@ -162,7 +188,9 @@ public class GoneFishingView extends JFrame
 	 */
 	public void setMaxTries(int maxTries)
 	{
-		// TODO
+		triesSlider.setMaximum(maxTries);
+		triesSlider.setValue(maxTries);
+		
 		
 	}
 }
