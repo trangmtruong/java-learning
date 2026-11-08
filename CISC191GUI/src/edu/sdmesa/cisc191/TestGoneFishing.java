@@ -36,49 +36,49 @@ import java.awt.event.*;
 
 class TestGoneFishing
 {
-//
-//	@Test
-//	void testGoneFishingModel()
-//	{
-//		GoneFishingModel model = new GoneFishingModel();
-//		assertEquals(10, model.getFishRemaining());
-//		assertEquals(30, model.getTriesRemaining());
-//		assertFalse(model.fishWin());
-//		assertFalse(model.playerWins());
-//		assertFalse(model.isGameOver());
-//
-//		model.fishAt(0, 0);
-//		assertTrue(model.getFishRemaining() >= 9);
-//		assertEquals(29, model.getTriesRemaining());
-//		assertFalse(model.fishWin());
-//		assertFalse(model.playerWins());
-//		assertFalse(model.isGameOver());
-//
-//		model.fishAt(5, 5);
-//		assertTrue(model.getFishRemaining() >= 8);
-//		assertEquals(28, model.getTriesRemaining());
-//		assertFalse(model.fishWin());
-//		assertFalse(model.playerWins());
-//		assertFalse(model.isGameOver());
-//
-//		// New model, fish 30 times maybe
-//		model = new GoneFishingModel();
-//		for (int row = 0; row < 6; row++)
-//		{
-//			for (int column = 0; column < 5; column++)
-//			{
-//				if (!model.isGameOver())
-//				{
-//					model.fishAt(row, column);
-//				}
-//			}
-//		}
-//
-//		assertTrue(model.getFishRemaining() >= 0);
-//		assertTrue(model.getTriesRemaining() >= 0);
-//		assertTrue(model.playerWins() || model.fishWin());
-//		assertTrue(model.isGameOver());
-//	}
+
+	@Test
+	void testGoneFishingModel()
+	{
+		GoneFishingModel model = new GoneFishingModel();
+		assertEquals(10, model.getFishRemaining());
+		assertEquals(30, model.getTriesRemaining());
+		assertFalse(model.fishWin());
+		assertFalse(model.playerWins());
+		assertFalse(model.isGameOver());
+
+		model.fishAt(0, 0);
+		assertTrue(model.getFishRemaining() >= 9);
+		assertEquals(29, model.getTriesRemaining());
+		assertFalse(model.fishWin());
+		assertFalse(model.playerWins());
+		assertFalse(model.isGameOver());
+
+		model.fishAt(5, 5);
+		assertTrue(model.getFishRemaining() >= 8);
+		assertEquals(28, model.getTriesRemaining());
+		assertFalse(model.fishWin());
+		assertFalse(model.playerWins());
+		assertFalse(model.isGameOver());
+
+		// New model, fish 30 times maybe
+		model = new GoneFishingModel();
+		for (int row = 0; row < 6; row++)
+		{
+			for (int column = 0; column < 5; column++)
+			{
+				if (!model.isGameOver())
+				{
+					model.fishAt(row, column);
+				}
+			}
+		}
+
+		assertTrue(model.getFishRemaining() >= 0);
+		assertTrue(model.getTriesRemaining() >= 0);
+		assertTrue(model.playerWins() || model.fishWin());
+		assertTrue(model.isGameOver());
+	}
 
 	@Test
 	void testFishingButton()
@@ -158,61 +158,61 @@ class TestGoneFishing
 		assertTrue(model.getFishRemaining() == 10
 				|| model.getFishRemaining() == 9);
 	}
-//
-//	@Test
-//	void testTriesAndFishRemaining()
-//	{
-//		GoneFishingModel model = new GoneFishingModel();
-//		GoneFishingView view = new GoneFishingView();
-//		GoneFishingController controller = new GoneFishingController(model,
-//				view);
-//
-//		int triesRemaining = model.getTriesRemaining();
-//
-//		// Click each button if possible until we run out of tries
-//		for (int i = 0; i < GoneFishingModel.DIMENSION; i++)
-//		{
-//			for (int j = 0; j < GoneFishingModel.DIMENSION; j++)
-//			{
-//				if (!model.isGameOver())
-//				{
-//					// Manually inject buttons with listeners
-//					FishingButton fishingButton = new FishingButton(i, j);
-//					FishingButtonListener listener = new FishingButtonListener(
-//							controller, fishingButton);
-//					// Click a button, use a try
-//					fishingButton.doClick();
-//					triesRemaining--;
-//					assertEquals(triesRemaining, model.getTriesRemaining());
-//				}
-//			}
-//		}
-//
-//		assertEquals(0, model.getTriesRemaining());
-//		// There are at least six positions not checked,
-//		// so there can be at most six fish left
-//		assertTrue(model.getFishRemaining() <= 6);
-//	}
-//
-//	@Test
-//	void testGoneFishingButtonShouldntBeClickedTwice()
-//	{
-//		GoneFishingModel model = new GoneFishingModel();
-//		GoneFishingView view = new GoneFishingView();
-//		GoneFishingController controller = new GoneFishingController(model,
-//				view);
-//
-//		FishingButton fishingButton = new FishingButton(2, 1);
-//		FishingButtonListener listener = new FishingButtonListener(controller,
-//				fishingButton);
-//
-//		// Simulate a click
-//		fishingButton.doClick();
-//		int triesAfterFirstClick = model.getTriesRemaining();
-//		// Simulate a click on the same button
-//		fishingButton.doClick();
-//		int triesAfterSecondClick = model.getTriesRemaining();
-//		// Second click should not change anything
-//		assertEquals(triesAfterFirstClick, triesAfterSecondClick);
-//	}
+
+	@Test
+	void testTriesAndFishRemaining()
+	{
+		GoneFishingModel model = new GoneFishingModel();
+		GoneFishingView view = new GoneFishingView();
+		GoneFishingController controller = new GoneFishingController(model,
+				view);
+
+		int triesRemaining = model.getTriesRemaining();
+
+		// Click each button if possible until we run out of tries
+		for (int i = 0; i < GoneFishingModel.DIMENSION; i++)
+		{
+			for (int j = 0; j < GoneFishingModel.DIMENSION; j++)
+			{
+				if (!model.isGameOver())
+				{
+					// Manually inject buttons with listeners
+					FishingButton fishingButton = new FishingButton(i, j);
+					FishingButtonListener listener = new FishingButtonListener(
+							controller, fishingButton);
+					// Click a button, use a try
+					fishingButton.doClick();
+					triesRemaining--;
+					assertEquals(triesRemaining, model.getTriesRemaining());
+				}
+			}
+		}
+
+		assertEquals(0, model.getTriesRemaining());
+		// There are at least six positions not checked,
+		// so there can be at most six fish left
+		assertTrue(model.getFishRemaining() <= 6);
+	}
+
+	@Test
+	void testGoneFishingButtonShouldntBeClickedTwice()
+	{
+		GoneFishingModel model = new GoneFishingModel();
+		GoneFishingView view = new GoneFishingView();
+		GoneFishingController controller = new GoneFishingController(model,
+				view);
+
+		FishingButton fishingButton = new FishingButton(2, 1);
+		FishingButtonListener listener = new FishingButtonListener(controller,
+				fishingButton);
+
+		// Simulate a click
+		fishingButton.doClick();
+		int triesAfterFirstClick = model.getTriesRemaining();
+		// Simulate a click on the same button
+		fishingButton.doClick();
+		int triesAfterSecondClick = model.getTriesRemaining();
+		// Second click should not change anything
+		assertEquals(triesAfterFirstClick, triesAfterSecondClick);
+	}
 }

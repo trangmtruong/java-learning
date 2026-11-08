@@ -1,5 +1,7 @@
 package edu.sdmesa.cisc191;
 
+import java.awt.Color;
+
 import javax.swing.JButton;
 
 /**
@@ -41,6 +43,11 @@ public class FishingButton extends JButton
 	
 	public FishingButton(int row, int column)
 	{
+		//sets the buttons to green
+		setBackground(Color.GREEN);
+		//settings to override mac settings to see green color buttons
+		setOpaque(true);
+		setBorderPainted(false);
 		this.row = row;
 		this.column = column;
 		setText("🌊");

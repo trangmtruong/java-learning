@@ -1,6 +1,7 @@
 package edu.sdmesa.cisc191;
 
 import java.awt.BorderLayout;
+import java.awt.Font;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -80,6 +81,19 @@ public class GoneFishingView extends JFrame
 		// add panel to the window's center
 		
 		add(panel, BorderLayout.CENTER);
+		
+		
+		//bottom panel
+		//create the label firsr
+		JLabel authorLabel  = new JLabel("Programmed by: Mia Truong");
+		authorLabel.setFont(new Font("SansSerif", Font.BOLD, 14));
+		
+		//create Jpanel
+		JPanel authorPanel = new JPanel();
+		//add authorlabel to panel
+		authorPanel.add(authorLabel);
+		//then add the panel to bottom
+		add(authorPanel,BorderLayout.SOUTH);
 		
 		// In the end do:
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
