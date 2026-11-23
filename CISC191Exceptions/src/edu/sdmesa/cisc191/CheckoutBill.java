@@ -4,12 +4,7 @@ package edu.sdmesa.cisc191;
 
 /**
  * Lead Author(s):
- * @author 
- * @author 
- * <<add additional lead authors here, with a full first and last name>>
- * 
- * Other contributors:
- * <<add additional contributors (mentors, tutors, friends) here, with contact information>>
+ * @author Mia Truong
  * 
  * References:
  * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
@@ -17,7 +12,7 @@ package edu.sdmesa.cisc191;
  * 
  * <<add more references here>>
  *  
- * Version/date: 
+ * Version/date: 11/22/26
  * 
  * Responsibilities of class:
  * 
@@ -39,7 +34,14 @@ public class CheckoutBill
 	 */
 	public void setBillAmount(double billAmount) throws IllegalArgumentException
 	{
-		// TODO
+		//if the billAmount is less than 0
+		if(billAmount < 0) 
+		{
+		//then throw IllegalArgumentException
+			throw new IllegalArgumentException();
+		}
+		//store billAmount in amount
+		amount = billAmount;
 	}
 
 	/**
