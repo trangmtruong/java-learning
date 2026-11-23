@@ -76,23 +76,23 @@ class TestExceptions
 
 	}
 
-//	@Test
-//	void testCheckoutBillSetTipPercent()
-//	{
-//		CheckoutBill bill = new CheckoutBill();
-//
-//		// The following statement checks that the call to setTipPercent does not throw
-//		// an Exception
-//		assertDoesNotThrow(() -> {
-//			bill.setTipPercent(0);
-//		});
-//
-//		// The following statement checks that the call to setTipPercent throws an
-//		// IllegalArgumentException
-//		assertThrows(IllegalArgumentException.class, () -> {
-//			bill.setTipPercent(-0.1);
-//		});
-//	}
+	@Test
+	void testCheckoutBillSetTipPercent()
+	{
+		CheckoutBill bill = new CheckoutBill();
+
+		// The following statement checks that the call to setTipPercent does not throw
+		// an Exception
+		assertDoesNotThrow(() -> {
+			bill.setTipPercent(0);
+		});
+
+		// The following statement checks that the call to setTipPercent throws an
+		// IllegalArgumentException
+		assertThrows(IllegalArgumentException.class, () -> {
+			bill.setTipPercent(-0.1);
+		});
+	}
 //
 //	@Test
 //	void testCheckoutBillCalculateTotalBill()
