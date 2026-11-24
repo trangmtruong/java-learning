@@ -116,15 +116,15 @@ class TestExceptions
 		});
 	}
 
-//	@Test
-//	void testMain()
-//	{
-//      // main never allow the program to crash, no matter which Exception is thrown
-//		assertDoesNotThrow(() -> {
-//			CheckoutBill.main(null);
-//		});
-//	}
-//
+	@Test
+	void testMain()
+	{
+      // main never allow the program to crash, no matter which Exception is thrown
+		assertDoesNotThrow(() -> {
+			CheckoutBill.main(null);
+		});
+	}
+
 //	@Test
 //	void testBankAccountDepositWithdraw() throws Exception
 //	{

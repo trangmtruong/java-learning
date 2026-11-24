@@ -87,10 +87,15 @@ public class CheckoutBill
 		// TODO: prevent the program from crashing from (almost) any exception
 		
 		CheckoutBill bill = new CheckoutBill();
+		try
+		{
 		bill.setTipPercent(-1);
 		bill.calculateTotalBill();
-		
-		// TODO: Print out any error messages to user
+		}
+		catch(Exception e)
+		{
+			System.out.println("Uh oh, something went wrong: " + e);
+		}
 	}
 	
 }
