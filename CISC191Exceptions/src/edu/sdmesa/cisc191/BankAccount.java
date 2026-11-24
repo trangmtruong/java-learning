@@ -44,9 +44,16 @@ public class BankAccount
 	 * @param amount to deposit
 	 * @throws InvalidAmountException is thrown if amount is not positive
 	 */
-	public void deposit(double amount)
+	public void deposit(double amount) throws InvalidAmountException
 	{
-		// TODO
+		// if amount is not positive,
+		if (amount <= 0)
+		{
+			//throw InvalidAmountException
+			throw new InvalidAmountException();
+		}
+		balance = balance + amount;
+
 	}
 
 	/**

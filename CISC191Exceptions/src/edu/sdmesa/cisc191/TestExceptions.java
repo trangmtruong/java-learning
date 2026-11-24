@@ -138,22 +138,22 @@ class TestExceptions
 //		account.withdraw(250);
 //		assertEquals(0, account.getBalance());
 //	}
-//
-//	@Test
-//	void testBankAccountDepositException() throws Exception
-//	{
-//		InvalidAmountException invalidAmountException = new InvalidAmountException(123.45);
-//		// Test that invalidAmountException is-an Exception; Exceptions are checked exceptions
-//		assertTrue(invalidAmountException instanceof Exception);
-//		
-//		BankAccount account = new BankAccount();
-//		account.deposit(100);
-//		Exception exception = assertThrows(InvalidAmountException.class, () -> {
-//			account.deposit(-0.01);
-//		});
-//		assertEquals("Negative amount: $-0.01 is not allowed", exception.getMessage());
-//      assertEquals(100, account.getBalance());
-//	}
+
+	@Test
+	void testBankAccountDepositException() throws Exception
+	{
+		InvalidAmountException invalidAmountException = new InvalidAmountException(123.45);
+		// Test that invalidAmountException is-an Exception; Exceptions are checked exceptions
+		assertTrue(invalidAmountException instanceof Exception);
+		
+		BankAccount account = new BankAccount();
+		account.deposit(100);
+		Exception exception = assertThrows(InvalidAmountException.class, () -> {
+			account.deposit(-0.01);
+		});
+		assertEquals("Negative amount: $-0.01 is not allowed", exception.getMessage());
+      assertEquals(100, account.getBalance());
+	}
 //
 //	@Test
 //	void testBankAccountWithdrawException1() throws Exception

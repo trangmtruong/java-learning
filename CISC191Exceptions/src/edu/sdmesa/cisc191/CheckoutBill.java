@@ -13,11 +13,11 @@ package edu.sdmesa.cisc191;
  *         Retrieved from
  *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
- *         <<add more references here>>
+ *       
  * 		
- *         Version/date: 11/22/26
+ *         Version/date: 11/23/26
  * 
- *         Responsibilities of class:
+ *         Responsibilities of class: stores bill amount and tip percentage. It calculates the total bill and throws exceptions when amount or tip is invalid
  * 		
  */
 /**
@@ -73,10 +73,10 @@ public class CheckoutBill
 	 */
 	public double calculateTotalBill() throws IllegalStateException
 	{
-		//if amount is not positive, or tip is negative
-		if(amount <= 0 || tipPercent < 0)
+		// if amount is not positive, or tip is negative
+		if (amount <= 0 || tipPercent < 0)
 		{
-		//throw IllegalStateException
+			// throw IllegalStateException
 			throw new IllegalStateException();
 		}
 		return amount * (1 + tipPercent / 100);
@@ -84,15 +84,14 @@ public class CheckoutBill
 	
 	public static void main(String[] args)
 	{
-		// TODO: prevent the program from crashing from (almost) any exception
 		
 		CheckoutBill bill = new CheckoutBill();
 		try
 		{
-		bill.setTipPercent(-1);
-		bill.calculateTotalBill();
+			bill.setTipPercent(-1);
+			bill.calculateTotalBill();
 		}
-		catch(Exception e)
+		catch (Exception e)
 		{
 			System.out.println("Uh oh, something went wrong: " + e);
 		}
