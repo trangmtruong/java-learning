@@ -93,29 +93,29 @@ class TestExceptions
 			bill.setTipPercent(-0.1);
 		});
 	}
-//
-//	@Test
-//	void testCheckoutBillCalculateTotalBill()
-//	{
-//		CheckoutBill bill1 = new CheckoutBill();
-//		bill1.setBillAmount(200);
-//		bill1.setTipPercent(20);
-//		assertEquals(240, bill1.calculateTotalBill());
-//
-//		CheckoutBill bill2 = new CheckoutBill();
-//		bill2.setBillAmount(200);
-//		// IllegalStateException is a run-time exception and therefore not checked
-//		assertThrows(IllegalStateException.class, () -> {
-//			bill2.calculateTotalBill();
-//		});
-//
-//		CheckoutBill bill3 = new CheckoutBill();
-//		bill3.setTipPercent(20);
-//		assertThrows(IllegalStateException.class, () -> {
-//			bill3.calculateTotalBill();
-//		});
-//	}
-//
+
+	@Test
+	void testCheckoutBillCalculateTotalBill()
+	{
+		CheckoutBill bill1 = new CheckoutBill();
+		bill1.setBillAmount(200);
+		bill1.setTipPercent(20);
+		assertEquals(240, bill1.calculateTotalBill());
+
+		CheckoutBill bill2 = new CheckoutBill();
+		bill2.setBillAmount(200);
+		// IllegalStateException is a run-time exception and therefore not checked
+		assertThrows(IllegalStateException.class, () -> {
+			bill2.calculateTotalBill();
+		});
+
+		CheckoutBill bill3 = new CheckoutBill();
+		bill3.setTipPercent(20);
+		assertThrows(IllegalStateException.class, () -> {
+			bill3.calculateTotalBill();
+		});
+	}
+
 //	@Test
 //	void testMain()
 //	{

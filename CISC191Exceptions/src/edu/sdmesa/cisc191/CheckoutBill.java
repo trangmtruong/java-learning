@@ -73,8 +73,12 @@ public class CheckoutBill
 	 */
 	public double calculateTotalBill() throws IllegalStateException
 	{
-		// TODO
-		
+		//if amount is not positive, or tip is negative
+		if(amount <= 0 || tipPercent < 0)
+		{
+		//throw IllegalStateException
+			throw new IllegalStateException();
+		}
 		return amount * (1 + tipPercent / 100);
 	}
 	
