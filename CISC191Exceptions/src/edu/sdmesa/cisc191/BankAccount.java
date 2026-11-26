@@ -50,7 +50,7 @@ public class BankAccount
 		if (amount <= 0)
 		{
 			//throw InvalidAmountException
-			throw new InvalidAmountException();
+			throw new InvalidAmountException(amount);
 		}
 		balance = balance + amount;
 
@@ -66,7 +66,7 @@ public class BankAccount
 	 */
 	public void withdraw(double amount)
 	{
-		// TODO
+		//
 	}
 
 	/**

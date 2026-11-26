@@ -125,19 +125,19 @@ class TestExceptions
 		});
 	}
 
-//	@Test
-//	void testBankAccountDepositWithdraw() throws Exception
-//	{
-//		BankAccount account = new BankAccount();
-//		account.deposit(200);
-//		assertEquals(200, account.getBalance());
-//		account.withdraw(150);
-//		assertEquals(50, account.getBalance());
-//		account.deposit(200);
-//		assertEquals(250, account.getBalance());
-//		account.withdraw(250);
-//		assertEquals(0, account.getBalance());
-//	}
+	@Test
+	void testBankAccountDepositWithdraw() throws Exception
+	{
+		BankAccount account = new BankAccount();
+		account.deposit(200);
+		assertEquals(200, account.getBalance());
+		account.withdraw(150);
+		assertEquals(50, account.getBalance());
+		account.deposit(200);
+		assertEquals(250, account.getBalance());
+		account.withdraw(250);
+		assertEquals(0, account.getBalance());
+	}
 
 	@Test
 	void testBankAccountDepositException() throws Exception

@@ -24,5 +24,22 @@ package edu.sdmesa.cisc191;
  */
 public class InvalidAmountException extends Exception
 {
+	double amount;
+	/**
+	 * Purpose: 
+	 * @param amount
+	 */
+	public InvalidAmountException(double amount)
+	{
+		this.amount = amount;
+	}
+	
+	@Override
+	public String getMessage() 
+	{
+		
+		return "Negative amount: $" + amount + " is not allowed";
+	}
+	
 	
 }
