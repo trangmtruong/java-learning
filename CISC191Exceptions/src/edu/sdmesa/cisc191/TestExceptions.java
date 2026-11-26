@@ -154,7 +154,7 @@ class TestExceptions
 		assertEquals("Negative amount: $-0.01 is not allowed", exception.getMessage());
       assertEquals(100, account.getBalance());
 	}
-//
+
 //	@Test
 //	void testBankAccountWithdrawException1() throws Exception
 //	{

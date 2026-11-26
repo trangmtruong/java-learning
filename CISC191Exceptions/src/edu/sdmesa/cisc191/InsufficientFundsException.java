@@ -1,6 +1,6 @@
 /**
 * Lead Author(s):
-* @author Mia Truong
+* @author Mia truong
 *
 * Other Contributors:
 * Full name; student ID or contact information if not in class
@@ -11,7 +11,8 @@
 * Java, Java, Java: Object-Oriented Problem Solving
 * https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
 *
-* Version: 2026-11-23
+*
+* Version: 2026-11-26
 */
 package edu.sdmesa.cisc191;
 
@@ -23,5 +24,14 @@ package edu.sdmesa.cisc191;
  */
 public class InsufficientFundsException extends Exception
 {
-	
+	double amount ;
+	public InsufficientFundsException (double amount)
+	{
+		this.amount = amount;
+	}
+	@Override
+	public String getMessage()
+	{
+		return "Withdrawing amount: $" + amount + " that is larger than balance: $" + amount + " is not allowed";
+	}
 }
