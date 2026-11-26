@@ -1,10 +1,7 @@
 /**
 * Lead Author(s):
-* @author Mia truong
+* @author Mia Truong
 *
-* Other Contributors:
-* Full name; student ID or contact information if not in class
-* <<Add additional contributors (mentors, tutors, friends) here, with contact information>>
 *
 * References:
 * Morelli, R., & Walde, R. (2016).
@@ -17,15 +14,14 @@
 package edu.sdmesa.cisc191;
 
 /**
- * Purpose: The reponsibility of InsufficientFundsException is ...
+ * Purpose: InsufficientFundsException is thrown when the requested amount to withdraw is more than balance
  *
- * InsufficientFundsException is-a ...
- * InsufficientFundsException is ...
+ * InsufficientFundsException is-a checked Exception
  */
 public class InsufficientFundsException extends Exception
 {
-	double amount ;
-	double balance;
+	private double amount ;
+	private double balance;
 
 	public InsufficientFundsException (double amount, double balance)
 	{

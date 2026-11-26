@@ -185,25 +185,25 @@ class TestExceptions
        assertEquals(299.98, account.getBalance());
 	}
 
-//	@Test
-//	void testWithdrawAsMuchPossible() throws Exception
-//	{
-//		BankAccount account1 = new BankAccount();
-//		account1.deposit(400);
-//		assertEquals(400, account1.withdrawAsMuchPossible(400));
-//	    assertEquals(0, account1.getBalance());
-//	
-//		BankAccount account2 = new BankAccount();
-//		account2.deposit(100);
-//		// Only withdraw as much as is available in the account
-//		// Hint: re-use withdraw
-//		assertEquals(100, account2.withdrawAsMuchPossible(200));
-//		assertEquals(0, account2.getBalance());
-//	
-//		assertThrows(InvalidAmountException.class, () -> {
-//			account2.withdrawAsMuchPossible(-0.01);
-//		});
-//		assertEquals(0, account2.getBalance());
-//	}
+	@Test
+	void testWithdrawAsMuchPossible() throws Exception
+	{
+		BankAccount account1 = new BankAccount();
+		account1.deposit(400);
+		assertEquals(400, account1.withdrawAsMuchPossible(400));
+	    assertEquals(0, account1.getBalance());
+	
+		BankAccount account2 = new BankAccount();
+		account2.deposit(100);
+		// Only withdraw as much as is available in the account
+		// Hint: re-use withdraw
+		assertEquals(100, account2.withdrawAsMuchPossible(200));
+		assertEquals(0, account2.getBalance());
+	
+		assertThrows(InvalidAmountException.class, () -> {
+			account2.withdrawAsMuchPossible(-0.01);
+		});
+		assertEquals(0, account2.getBalance());
+	}
 
 }

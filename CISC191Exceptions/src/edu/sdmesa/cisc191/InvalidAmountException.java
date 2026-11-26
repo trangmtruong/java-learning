@@ -1,10 +1,6 @@
 /**
 * Lead Author(s):
-* @author Mia truong
-*
-* Other Contributors:
-* Full name; student ID or contact information if not in class
-* <<Add additional contributors (mentors, tutors, friends) here, with contact information>>
+* @author Mia Truong
 *
 * References:
 * Morelli, R., & Walde, R. (2016).
@@ -12,21 +8,20 @@
 * https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
 *
 *
-* Version: 2026-11-23
+* Version: 2026-11-26
 */
 package edu.sdmesa.cisc191;
 
 /**
- * Purpose: The reponsibility of InvalidAmountException is ...
+ * Purpose: InvalidAmountException is thrown when amount requested to be withdrawn and deposit is zero or negative, 
  *
- * InvalidAmountException is-a ...
- * InvalidAmountException is ...
+ * InvalidAmountException is-a checked Exception
  */
 public class InvalidAmountException extends Exception
 {
-	double amount;
+	private double amount;
 	/**
-	 * Purpose: 
+	 * Purpose: creates an exception and stores the amount 
 	 * @param amount
 	 */
 	public InvalidAmountException(double amount)
