@@ -4,27 +4,23 @@ package edu.sdmesa.cisc191;
 
 /**
  * Lead Author(s):
+ * @author 
+ * @author 
+ * <<add additional lead authors here, with a full first and last name>>
  * 
- * @author
- * @author
- *         <<add additional lead authors here, with a full first and last name>>
+ * Other contributors:
+ * <<add additional contributors (mentors, tutors, friends) here, with contact information>>
  * 
- *         Other contributors:
- *         <<add additional contributors (mentors, tutors, friends) here, with
- *         contact information>>
+ * References:
+ * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
+ * Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
- *         References:
- *         Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented
- *         Problem Solving.
- *         Retrieved from
- *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+ * <<add more references here>>
+ *  
+ * Version/date: 
  * 
- *         <<add more references here>>
- * 		
- *         Version/date:
+ * Responsibilities of class:
  * 
- *         Responsibilities of class:
- * 		
  */
 /**
  */
@@ -32,7 +28,7 @@ public class BankAccount
 {
 	// A bank account has a current balance starting at $0.00
 	private double balance = 0;
-	
+
 	/**
 	 * 
 	 * @return the current balance
@@ -41,7 +37,7 @@ public class BankAccount
 	{
 		return balance;
 	}
-	
+
 	/**
 	 * Deposit amount into account
 	 * 
@@ -53,52 +49,51 @@ public class BankAccount
 		// if amount is not positive,
 		if (amount <= 0)
 		{
-			// throw InvalidAmountException
+			//throw InvalidAmountException
 			throw new InvalidAmountException(amount);
 		}
 		
-		// add the amount to the balance
+		//add the amount to the balance
 		balance = balance + amount;
-		
+
 	}
-	
+
 	/**
 	 * Withdraw amount from account
 	 * 
 	 * @param amount to withdraw
 	 * @throws InvalidAmountException     is thrown if amount is not positive
-	 * @throws InsufficientFundsException is thrown if there is not enough funds
-	 *                                    in
+	 * @throws InsufficientFundsException is thrown if there is not enough funds in
 	 *                                    the account to make the withdrawal
 	 */
-	public void withdraw(double amount)
-			throws InsufficientFundsException, InvalidAmountException
+	public void withdraw(double amount) throws InsufficientFundsException, InvalidAmountException
 	{
-		// if amount is 0 or less
+		//if amount is 0 or less
 		if (amount <= 0)
 		{
-			// throw InvalidAmountException
+			//throw InvalidAmountException
 			throw new InvalidAmountException(amount);
 		}
-		// if amount is > balance
+		//if amount is >  balance
 		
 		if (amount > balance)
 		{
-			// throw InsufficientFundsException
-			throw new InsufficientFundsException(amount);
+			//throw InsufficientFundsException
+			throw new InsufficientFundsException(amount, balance);
 		}
 		// withdraw amount from balance
-		balance = balance - amount;
+		balance = balance- amount;
+		
 		
 	}
-	
+
 	/**
 	 * Withdraw amount requested or the biggest amount possible
 	 * 
 	 * @return the amount actually withdrawn
-	 * @throws InvalidAmountException is thrown if amount is not positive
+	 * @throws InvalidAmountException     is thrown if amount is not positive
 	 */
-	public double withdrawAsPossible(double requestAmount)
+	public double withdrawAsPossible(double requestAmount) throws Exception
 	{
 		// TODO:
 		// Try to withdraw the requested amount
@@ -109,5 +104,5 @@ public class BankAccount
 		
 		return -1;
 	}
-	
+
 }

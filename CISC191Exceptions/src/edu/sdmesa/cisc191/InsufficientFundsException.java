@@ -25,13 +25,16 @@ package edu.sdmesa.cisc191;
 public class InsufficientFundsException extends Exception
 {
 	double amount ;
-	public InsufficientFundsException (double amount)
+	double balance;
+
+	public InsufficientFundsException (double amount, double balance)
 	{
 		this.amount = amount;
+		this.balance = balance;
 	}
 	@Override
 	public String getMessage()
 	{
-		return "Withdrawing amount: $" + amount + " that is larger than balance: $" + amount + " is not allowed";
+		return "Withdrawing amount: $" + amount + " that is larger than balance: $" + balance + " is not allowed";
 	}
 }

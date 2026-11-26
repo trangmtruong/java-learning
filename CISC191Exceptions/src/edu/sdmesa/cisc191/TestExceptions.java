@@ -155,36 +155,36 @@ class TestExceptions
       assertEquals(100, account.getBalance());
 	}
 
-//	@Test
-//	void testBankAccountWithdrawException1() throws Exception
-//	{
-//		BankAccount account = new BankAccount();
-//		account.deposit(200);
-//		Exception exception = assertThrows(InvalidAmountException.class, () -> {
-//			account.withdraw(-0.02);
-//		});
-//		assertEquals("Negative amount: $-0.02 is not allowed", exception.getMessage());
-//		assertEquals(200, account.getBalance());
-//	}
-//
-//	@Test
-//	void testBankAccountWithdrawException2() throws Exception
-//	{
-//		InsufficientFundsException insufficientFundsException = new InsufficientFundsException(1.11, 1.12);
-//		// Test that insufficientFundsException is-an Exception
-//		assertTrue(insufficientFundsException instanceof Exception);
-//	
-//		BankAccount account = new BankAccount();
-//		account.deposit(299.98);
-//		Exception exception2 = assertThrows(InsufficientFundsException.class, () -> {
-//			// Try to withdraw more than balance
-//			account.withdraw(299.99);
-//		});
-//		assertEquals("Withdrawing amount: $299.99 that is larger than balance: $299.98 is not allowed",
-//							exception2.getMessage());
-//       assertEquals(299.98, account.getBalance());
-//	}
-//
+	@Test
+	void testBankAccountWithdrawException1() throws Exception
+	{
+		BankAccount account = new BankAccount();
+		account.deposit(200);
+		Exception exception = assertThrows(InvalidAmountException.class, () -> {
+			account.withdraw(-0.02);
+		});
+		assertEquals("Negative amount: $-0.02 is not allowed", exception.getMessage());
+		assertEquals(200, account.getBalance());
+	}
+
+	@Test
+	void testBankAccountWithdrawException2() throws Exception
+	{
+		InsufficientFundsException insufficientFundsException = new InsufficientFundsException(1.11, 1.12);
+		// Test that insufficientFundsException is-an Exception
+		assertTrue(insufficientFundsException instanceof Exception);
+	
+		BankAccount account = new BankAccount();
+		account.deposit(299.98);
+		Exception exception2 = assertThrows(InsufficientFundsException.class, () -> {
+			// Try to withdraw more than balance
+			account.withdraw(299.99);
+		});
+		assertEquals("Withdrawing amount: $299.99 that is larger than balance: $299.98 is not allowed",
+							exception2.getMessage());
+       assertEquals(299.98, account.getBalance());
+	}
+
 //	@Test
 //	void testWithdrawAsMuchPossible() throws Exception
 //	{
